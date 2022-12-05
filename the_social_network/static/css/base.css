@@ -1,0 +1,76 @@
+:root {
+    --textColor : #FEFCF3;
+	--tempColor: #00c6c0;
+    --bgColor: #FAFAFF;
+    --thColor: #ECEBE4;
+    --hoverColor: #DADDD8;
+    --navColor: #EEF0F2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bgColor);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #EEF0F2;
+    padding: 10px;
+}
+
+nav h1 {
+    margin-left: 100px;
+    padding: 8px 12px;
+}
+
+nav ul li {
+    list-style: none;
+	display: inline-block;
+	padding: 8px 12px;
+	position: relative;
+	cursor: pointer;
+    font-size: 18px;
+}
+
+nav ul li:hover {
+    background-color: var(--hoverColor);
+    border-radius: 12px;
+}
+
+
+
+section {
+    height: 90vh;
+    
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    height: inherit;
+    width: 75%;
+    margin: auto;
+    text-align: center;
+}
+
+
+
+.container .left, .center {
+    border-right: 1px solid black;
+}
+
+
+footer {
+    background-color: var(--navColor);
+    padding: 20px;
+
+}
+
+footer .dmca {
+    text-align: center;
+}

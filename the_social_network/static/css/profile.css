@@ -1,6 +1,8 @@
 :root {
     --textColor : #FEFCF3;
 	--tempColor: #00c6c0;
+    --bgColor: #FAFAFF;
+    --thColor: #ECEBE4;
 }
 
 * {
