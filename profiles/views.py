@@ -13,3 +13,12 @@ def register(request):
 
 def feed(request):
     return render(request,'feed.html')
+
+def messages(request):
+    return render(request,'messages.html')
+
+def search(request):
+    return render(request,'search.html')
+
+def tokens(request):
+    return render(request,'tokens.html')
