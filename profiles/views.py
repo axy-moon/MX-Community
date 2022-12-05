@@ -4,3 +4,6 @@ from django.shortcuts import render
 
 def profile(request):
     return render(request,'base.html')
+
+def login(request):
+    return render(request,'login.html')
