@@ -1,0 +1,54 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav h1 {
+    margin-left: 60px;
+}
+
+nav > div {
+    display: flex;
+    padding: 8px 12px;
+    margin-right: 20px;
+}
+
+nav > div p {
+    margin-right: 20px;
+}
+
+.box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top:20px;
+    width: 50%;
+    border: 1px solid #EEF0F2;
+    margin: auto;
+    height: 500px;
+}
+.box .left {
+    text-align: center;
+}
+.box .left img {
+    margin-top: 100px;
+    height: 240px;
+    
+}
+
+.log-box {
+    padding-top: 100px;
+    padding-left: 80px;
+}
+
+.log-box input {
+    width: 80%;
+    height: 36px;
+}
+
+.log-box input[type=submit] {
+    margin-top: 30px;
+}
+
+.box .left {
+    background-color: #EEF0F2;
+}
