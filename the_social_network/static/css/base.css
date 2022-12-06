@@ -68,17 +68,48 @@ section {
     border-right: 1px solid black;
 }
 
-.container .center .post .username{
-   margin: 5x;
-   border: 2px solid black;
- 
+.container .post {
+    background-color: grey;
+    width: 90%;
+    margin: auto;
+    margin-top: 25px;
+    border-radius: 12px;
+    height: 600px;
 }
+
+.container .center .post .username{
+    padding: 20px;
+}
+
+.container #datetime {
+    opacity: 0.7;
+    font-size: 14px;
+}
+
 .container .center .post .caption{
-    margin: 5px;
-    padding: 5px;
-    border: 2px solid black;
+    padding: 20px;
   
  }
+.container .center .image {
+    display: grid;
+    place-items: center;
+
+}
+
+.container .commentbox {
+    background-color: grey;
+    height: 60px;
+    border-radius: 12px;
+    width: 90%;
+    margin: auto;
+    margin-top: 2px;
+
+}
+
+ .container .center .image img {
+    margin: 20px;
+    width: 500px;
+}
 footer {
     background-color: var(--navColor);
     padding: 20px;
