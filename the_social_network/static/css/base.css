@@ -59,7 +59,7 @@ section {
     height: inherit;
     width: 75%;
     margin: auto;
-    text-align: center;
+    
 }
 
 
@@ -68,7 +68,17 @@ section {
     border-right: 1px solid black;
 }
 
-
+.container .center .post .username{
+   margin: 5x;
+   border: 2px solid black;
+ 
+}
+.container .center .post .caption{
+    margin: 5px;
+    padding: 5px;
+    border: 2px solid black;
+  
+ }
 footer {
     background-color: var(--navColor);
     padding: 20px;
