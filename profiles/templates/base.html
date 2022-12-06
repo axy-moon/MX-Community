@@ -7,7 +7,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="{% static 'css/base.css'%}">
         <title>
-        {% block title %} {% endblock %}
+        {% block title %}
+        Base
+        {% endblock %}
         </title>
     </head>
     <body>
@@ -15,10 +17,10 @@
             <h1>MX</h1>
             <div>
                 <ul>
-                    <li>Feed</li>
-                    <li>Message</li>
-                    <li>Tokens</li>
-                    <li>Search</li>
+                   <a href="{% url 'feed'%}"><li>Feed</li></a>
+                    <a href="{% url 'messages'%}"><li>Message</li></a>
+                    <a href="{%url 'tokens'%}"><li>Tokens</li></a>
+                    <a href="{% url 'search'%}"><li>Search</li></a>
                 </ul>
             </div>
         </nav>

@@ -1,11 +1,12 @@
 :root {
-    --textColor : #FEFCF3;
+    --textColor : #000;
 	--tempColor: #00c6c0;
     --bgColor: #FAFAFF;
     --thColor: #ECEBE4;
     --hoverColor: #DADDD8;
     --navColor: #EEF0F2;
 }
+
 
 * {
     margin: 0;
@@ -19,7 +20,7 @@ body {
 nav {
     display: flex;
     justify-content: space-between;
-    background-color: #EEF0F2;
+    background-color: var(--navColor);
     padding: 10px;
 }
 
@@ -35,6 +36,9 @@ nav ul li {
 	position: relative;
 	cursor: pointer;
     font-size: 18px;
+}
+nav ul a{
+    color: var(--textColor) ;
 }
 
 nav ul li:hover {
