@@ -4,6 +4,8 @@
 
 {% block page %}
 
+{% load static%}
+
     <div class="container">
         <div class="left">
             <p style="text-align:left;">left</p> 
@@ -12,16 +14,22 @@
         <div class="center">
             
             <div class="post">
-               <div class="username">default name</div> 
+                <div class="username">
+                    <h3>Username</h3>
+                    <p id="datetime">20 September 2022 9:58PM</p>
+                </div>
 
-              <div class="caption"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum metus sed ornare dictum.
-                     Mauris accumsan libero at dignissim bibendum. Vivamus ornare odio vel sollicitudin pellentesque. Morbi ac fringilla nibh.
-                      Aliquam erat volutpat. Vivamus sodales posuere urna, sit amet scelerisque elit sodales a. Etiam vel placerat ante, congue eleifend felis. 
-                      Duis et pretium leo, at consequat mi. Cras pretium ligula felis, a elementum massa rhoncus at.
-                       Donec suscipit maximus tortor, a finibus mi congue sed. Sed auctor consequat vehicula. 
-                    Maecenas ut sapien suscipit, cursus tortor id, porta est. Donec quis hendrerit nisi.</div>
+
+              <div class="caption"> 
+                    <p>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum metus sed ornare dictum.
+                     Mauris accumsan libero at dignissim bibendum. Vivamus ornare odio vel sollicitudin pellentesque. Morbi ac fringilla nibh.</p>
                     
-            <div class="image"> <img src={% '/img/sample.jpg' %}" alt="new image"> </div>
+                    </div>
+                    
+            <div class="image"> <img src="{% static '/img/sample.jpg'%}" alt="new image"> </div>
+            </div>
+            <div class="commentbox">
+
             </div>
         </div>
 
