@@ -9,6 +9,9 @@ def login(request):
     return render(request,'login.html')
 
 def register(request):
+    if request.method == 'POST':
+        username = requset.POST[]
+        
     return render(request,'register.html')
 
 def feed(request):
