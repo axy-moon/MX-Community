@@ -1,8 +1,58 @@
-{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MX | Login</title>
+    <link rel="stylesheet" href="{% static 'css/login.css'%}">
+</head>
+<body>
+    <nav>
+        <h1>MX</h1>
+        <div>
+            <p>Sign In</p>
+            <p>Register</p>
+        </div>
+    </nav>
 
-{% block title %} MX | Register {% endblock %}
-
-{% block page %}
-
-
-{% endblock %}
+    <section>
+        <div class="box" id="reg">
+            <div class="left">
+                <img src="{% static 'img/register.svg'%}" alt="">
+            </div>
+            <div class="right">
+                <div class="log-box">
+                
+                <h3>Register</h3>
+                <div class="regbox">
+                <div>
+                <p>Roll No</p>
+                <input type="text" name="" id="">
+                <p>Username</p>
+                <input type="text" name="" id="">
+                </div>
+                <div>
+                    <p>Full Name</p>
+                    <input type="text" name="" id="">
+                    <p>Password</p>
+                    <input type="text" name="" id="">
+                    </div>
+                <div>
+                    <p>Email</p>
+                    <input type="email" name="" id="">
+                    <p>Phone No</p>
+                    <input type="tel" name="" id="">
+                    </div>
+                
+            </div>
+            <div>
+                <input type="submit" name="" id="" value="REGISTER">
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,3 +1,16 @@
+:root {
+    --textColor : #000;
+	--tempColor: #00c6c0;
+    --bgColor: #FAFAFF;
+    --thColor: #ECEBE4;
+    --hoverColor: #DADDD8;
+    --navColor: #EEF0F2;
+}
+
+body {
+    background-color: var(--bgColor);
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -20,11 +33,12 @@ nav > div p {
 .box {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-top:20px;
     width: 50%;
     border: 1px solid #EEF0F2;
     margin: auto;
     height: 500px;
+    margin-top:60px;
+
 }
 .box .left {
     text-align: center;
@@ -43,12 +57,41 @@ nav > div p {
 .log-box input {
     width: 80%;
     height: 36px;
+    font-size: 18px;
 }
 
 .log-box input[type=submit] {
     margin-top: 30px;
+    background-color: #00c6c0;
+    border: none;
+    color:#fff;
 }
+
 
 .box .left {
     background-color: #EEF0F2;
+}
+
+#reg {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    border: 1px solid #EEF0F2;
+    margin: auto;
+    margin-top:60px;  
+    width: 90%;
+}
+
+#reg input[type=text] {
+    width: 100%;
+}
+
+#reg input[type=submit] {
+    width: 46%;
+    margin-left: 200px;
+}
+
+.regbox {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
 }
