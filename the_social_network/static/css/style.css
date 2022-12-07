@@ -74,6 +74,8 @@ nav {
 
 .text-box h1 {
     font-size: 48px;
+	margin-bottom: 10px;
+
 }
 
 .btns button {
@@ -94,4 +96,9 @@ nav {
 	border:1px solid black;
 	transition:0.5s;
 
+}
+
+.text-box p
+{
+	font-size: 12px;
 }
