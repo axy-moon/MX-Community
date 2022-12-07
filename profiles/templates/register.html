@@ -26,8 +26,9 @@
                 <div class="log-box">
                 
                 <h3>Register</h3>
-                <div class="regbox">
                 <form method="POST" action="{% url 'register' %}">
+                {% csrf_token %}
+                <div class="regbox">
                 <div>
                 <p>Roll No</p>
                 <input type="text" name="rollnum" id="rollnum">
@@ -35,22 +36,23 @@
                 <input type="text" name="uname" id="uname">
                 </div>
                 <div>
-                    <p>Full Name</p>
+                    <p>First Name</p>
                     <input type="text" name="fname" id="fname">
                     <p>Password</p>
                     <input type="text" name="pswd" id="pswd">
                     </div>
                 <div>
+                    <p>Last Name</p>
+                    <input type="lastname" name="lname" id="lastname">
                     <p>Email</p>
-                    <input type="email" name="email" id="email">
-                    <p>Phone No</p>
-                    <input type="tel" name="phno" id="phno">
-                    </div>
-                </form> 
+                    <input type="email" name="email" id="email">    
+                </div>
+                    
             </div>
             <div>
                 <input type="submit" name="regnum" id="regnum" value="REGISTER">
                 </div>
+            </form> 
             </div>
             </div>
         </div>
