@@ -6,10 +6,12 @@ from django.db.models.fields import AutoField, CharField, IntegerField
 from django.db.models.fields.related import ForeignKey
 from django.utils import timezone
 from datetime import date
-
+from django.contrib.auth.models import AbstractUser
 
 # Create your models here.
-
+class NewUser(AbstractUser):
+    rollno = models.CharField(null=False,max_length=7)
+    year = models.DateField()
 
 """ 
 class profile(models.Model):
