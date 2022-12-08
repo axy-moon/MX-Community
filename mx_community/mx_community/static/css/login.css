@@ -1,0 +1,42 @@
+:root {
+    --thColor: #181D31;
+    --bdyColor: #D6E4E5;
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins','sans-serif';
+    box-sizing: border-box;
+}
+body{
+    background: var(--thColor);
+}
+
+.reg-logo {
+    display: grid;
+    place-items: center;
+}
+
+.reg-container {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.reg-container img {
+    width: 75%;
+    margin-top: 100px;
+    margin-right: 80px;
+}
+
+.reg-form {
+    background-color: #6B728E;
+    border-radius: 10px;
+    height: 50vh;
+    width: 50%;
+    box-shadow: -3px 5px 11px -1px rgba(0,0,0,0.66);
+    -webkit-box-shadow: -3px 5px 11px -1px rgba(0,0,0,0.66);
+    -moz-box-shadow: -3px 5px 11px -1px rgba(0,0,0,0.66);
+}

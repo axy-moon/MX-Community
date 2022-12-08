@@ -1,0 +1,188 @@
+{% extends 'base.html' %}
+
+{% block title %} MX Community | Feeds {% endblock %}
+
+{% block page%}
+
+{% load static %}
+
+<div class="container">
+
+    <!------------------left-sidebar------------->
+    <div class="left-sidebar">
+        <div class="imp-links">
+            <a href="#"><img src="/images/news.png"> latest News</a>
+            <a href="#"><img src="/images/friends.png"> friends</a>
+            <a href="#"><img src="/images/group.png"> groups</a>
+            <a href="#"><img src="/images/marketplace.png"> marketplace</a>
+            <a href="#"><img src="/images/watch.png">watch</a>
+            <a href="#">See More</a>
+        </div>
+        <div class="shortcut-links">
+
+            <p>your shortcuts</p>
+            <a href="#"><img src="/images/shortcut-1.png">Web Developers</a>
+            <a href="#"><img src="/images/shortcut-2.png">web design course</a>
+            <a href="#"><img src="/images/shortcut-3.png">Full stack Development</a>
+            <a href="#"><img src="/images/shortcut-4.png">Website Expert</a>
+        </div>
+    </div>
+     <!------------------main-content------------->
+    <div class="main-content">
+
+        <div class="write-post-container">
+            <div class="user-profile">
+                <img src="{% static '/img/user.png' %}" alt="">
+                <div>
+                    <p>Suresh</p>
+                    <small>public</small>
+                    <i class="fa-sharp fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+            <div class="post-input-container">
+                <textarea rows="3" placeholder="what's your question?"></textarea>
+
+                <div class="add-post-links">
+                    <a href="#"> <img src="/images/live-video.png" alt="">Live Video </a>
+                    <a href="#"> <img src="/images/photo.png" alt="">photo/video </a>
+                    <a href="#"> <img src="/images/feeling.png" alt="">Feeling/Activity </a>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="post-container">
+
+            <div class="post-row">
+                <div class="user-profile">
+                    <img src="{% static '/img/user.png' %}" alt="">
+                    <div>
+                        <p>Suresh</p>
+                        <span>December 14 2022, 13:40</span>
+                    </div>
+                </div>
+                <a href="#">  <i class="fas fa-ellipsis-v"></i></a>
+            </div>
+       
+            <p class="post-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                 Explicabo dolore fugiat nam laborum ea temporibus dicta asperiores dignissimos 
+                 vitae accusamus optio, aliquid animi consectetur voluptates rerum in et eveniet <a href="#">#webdev</a>
+                <a href="#">#fullstack</a></p>
+                <img src="/images/feed-image-1.png" alt="" class="post-img">
+
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="/images/like-blue.png" alt="">100</div>
+                        <div><img src="/images/comments.png" alt="">10</div>
+                        <div><img src="/images/share.png" alt="">5</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="/images/profile-pic.png" alt="">
+                        <i class="fa-sharp fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+        </div>
+
+        
+        <div class="post-container">
+
+            <div class="post-row">
+                <div class="user-profile">
+                    <img src="{% static '/img/user.png' %}" alt="">
+                    <div>
+                        <p>Sreeman</p>
+                        <span>june 29 2022, 20:40</span>
+                    </div>
+                </div>
+                <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+            </div>
+       
+            <p class="post-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                 Explicabo dolore fugiat nam laborum ea temporibus dicta asperiores dignissimos 
+                 vitae accusamus optio, aliquid animi consectetur voluptates rerum in et eveniet <a href="#">#webdev</a>
+                <a href="#">#fullstack</a></p>
+                <img src="/images/feed-image-2.png" alt="" class="post-img">
+
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="/images/like-blue.png" alt="">1001</div>
+                        <div><img src="/images/comments.png" alt="">100</div>
+                        <div><img src="/images/share.png" alt="">50</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="/images/profile-pic.png" alt="">
+                        <i class="fa-sharp fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+        </div>
+            <button type="button" class="load-more-btn">Load More</button>
+    </div>
+     <!------------------right-sidebar------------->
+    <div class="right-sidebar">
+
+        <div class="sidebar-title">
+            <h4>Events</h4>
+            <a href="#">See All</a>
+        </div>
+
+        <div class="event">
+            <div class="left-event">
+                <h3>14</h3>
+                <span>december</span>
+            </div>
+            <div class="right-event">
+                <h4>Project Review</h4>
+                <p><i class="fa-solid fa-location-dot"></i></i>psg college of technology</p>
+                <a href="#">More Info</a>
+            </div>
+        </div>
+            <div class="event">
+                <div class="left-event">
+                    <h3>9</h3>
+                    <span>january</span>
+                </div>
+                <div class="right-event">
+                    <h4>CA test</h4>
+                    <p><i class="fa-solid fa-location-dot"></i>psg college of technology</p>
+                    <a href="#">More Info</a>
+                </div>
+        </div>
+        <div class="sidebar-title">
+            <h4>Advertisment</h4>
+            <a href="#">Close</a>
+        </div>
+        <img src="{% static '/img/clg.jpg' %}" alt="" class="side-ads">
+        <div class="sidebar-title">
+            <h4>Conversation</h4>
+            <a href="#">Hide chat</a>
+        </div>
+
+        <div class="online-list">
+            <div class="online">
+                <img src="{% static '/img/user.png' %}" alt="">
+            </div>
+            <p>Akshaya</p>
+        </div>
+
+        <div class="online-list">
+            <div class="online">
+                <img src="{% static '/img/user.png' %}" alt="">
+            </div>
+            <p>Augxy Moon</p>
+        </div>
+
+        <div class="online-list">
+            <div class="online">
+                <img src="{% static '/img/user.png' %}" alt="">
+            </div>
+            <p>Nagul</p>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
