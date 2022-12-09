@@ -4,3 +4,4 @@ from django.contrib.auth.models import AbstractUser
 
 class NewUser(AbstractUser):
     rollno = models.CharField(max_length=7,null=False,unique=True)
+    USERNAME_FIELD = 'rollno'
