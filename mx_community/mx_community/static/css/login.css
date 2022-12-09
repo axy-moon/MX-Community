@@ -40,3 +40,42 @@ body{
     -webkit-box-shadow: -3px 5px 11px -1px rgba(0,0,0,0.66);
     -moz-box-shadow: -3px 5px 11px -1px rgba(0,0,0,0.66);
 }
+
+.reg-form form {
+    padding: 60px;
+}
+
+
+.reg-form p {
+    padding-bottom: 5px;
+}
+
+.reg-form input {
+    margin-bottom: 20px;
+    font-size: 18px;
+    height: 35px;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+
+}
+
+.form {
+    display: flex;
+    justify-content: space-around;
+}
+
+.form-right {
+    margin-left: 100px;
+}
+
+form .submit-btn {
+    width: 20%;
+    margin: auto;
+}
+
+form input[type=submit] {
+    margin-top: 20px;
+    width: 100%;
+}
