@@ -125,3 +125,6 @@ STATIC_ROOT = os.path.join(BASE_DIR,'mx_community/assets/')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'mca.NewUser'
+
+LOGIN_REDIRECT_URL = 'feed'
+LOGIN_URL = 'login'
