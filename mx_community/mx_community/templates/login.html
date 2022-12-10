@@ -12,7 +12,9 @@
    
         <div class="reg-logo">
          <img src="{% static '/img/register_logo.png' %}">
+        <div>
 
+        </div>            
             <div class="reg-form" style="width:400px;">
             <form action="" method="POST">
                 {% csrf_token %}
@@ -29,7 +31,7 @@
                 </div>
             </div>
                 <div class="submit-btn" style="width:55%">
-                    <input type="submit" name="register-btn" id="" value="Login">
+                    <input type="submit" name="register-btn" id="register-btn" value="Login">
                 </div>
             </form>
             </div>

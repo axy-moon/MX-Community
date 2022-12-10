@@ -29,7 +29,7 @@ def login(request):
         password = request.POST['password']
         rollno = request.POST['rollno']
 
-        user = auth.authenticate(request,username=username,password=password,rollno=rollno)
+        user = auth.authenticate(request,password=password,rollno=rollno)
         if user is not None:
             auth.login(request,user)
             return redirect('feed')
