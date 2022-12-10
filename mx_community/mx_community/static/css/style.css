@@ -41,7 +41,6 @@ nav{
     display: inline-block;
 }
 .nav-left ul li i {
-    color: #fff;
     font-size: 24px;
     margin: 0 15px;
 }
@@ -54,7 +53,7 @@ nav{
 
 i {
     font-size: 24px;
-    color: #fff;
+    color: #F6F6F6;
 }
 
 .user-info {
@@ -352,4 +351,43 @@ i {
     color: #626262;
     background-color: transparent;
     border-radius: 4px;
+}
+
+
+.tokens-container {
+    width: 75%;
+    margin: auto;
+}
+
+.tokens-container h1 {
+    text-align: center;
+    padding-top: 40px;
+    margin-bottom: 30px;
+}
+
+.token-box {
+    display: flex;
+    border: 1px solid red;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+
+.token-box p {
+    color: #000;
+}
+
+.token-box img {
+    border-radius: 50%;
+    width: 50px;
+}
+
+.token-box button {
+    width: 100px;
+    height: 30px;
+    background-color: #5BB318;
+    border: none;
+    border-radius: 5px;
 }

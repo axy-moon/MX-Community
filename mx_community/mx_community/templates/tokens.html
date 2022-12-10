@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} MX Community | Tokens {% endblock %}
+
+{% block page %}
+
+    <div class="tokens-container">
+        <h1>Tokens</h1>
+    
+        <div class="token-box">
+            <div class="user-profile">
+                <img src="{% static '/img/user.png' %}" alt="">
+                <p>{{user.get_full_name}}</p>
+            </div>
+            <div class="buttons">
+                <button>Message</button>
+                <button>View Profile</button>
+            </div>
+
+        </div>
+    
+    </div>
+
+{% endblock %}

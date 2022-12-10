@@ -34,7 +34,7 @@
             <div class="user-profile">
                 <img src="{% static '/img/user.png' %}" alt="">
                 <div>
-                    <p style="text-transform: capitalize;">{{user.first_name}}</p>
+                    <p style="text-transform: capitalize;">{{user.get_full_name}}</p>
                     <small>public</small>
                     <i class="fa-sharp fa-solid fa-caret-down"></i>
                 </div>
@@ -59,8 +59,10 @@
                 <div class="user-profile">
                     <img src="{% static '/img/user.png' %}" alt="">
                     <div>
-                        <p>{{post.author.first_name}}</p>
+                        <p>{{post.author.first_name}}<span>{{post.author.rollno}}</span>   </p>
                         <span>{{post.post_time}}</span>
+                                                
+
                     </div>
                 </div>
                 <a href="#">  <i class="fas fa-ellipsis-v"></i></a>
@@ -126,27 +128,14 @@
             <h4>Conversation</h4>
             <a href="#">Hide chat</a>
         </div>
-
+        {% for i in users %}
         <div class="online-list">
             <div class="online">
                 <img src="{% static '/img/user.png' %}" alt="">
             </div>
-            <p>Akshaya</p>
+            <p>{{i.rollno}}<br>{{i.get_full_name}}</p>
         </div>
-
-        <div class="online-list">
-            <div class="online">
-                <img src="{% static '/img/user.png' %}" alt="">
-            </div>
-            <p>Augxy Moon</p>
-        </div>
-
-        <div class="online-list">
-            <div class="online">
-                <img src="{% static '/img/user.png' %}" alt="">
-            </div>
-            <p>Nagul</p>
-        </div>
+        {% endfor %}
 
     </div>
 </div>

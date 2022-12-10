@@ -1,12 +1,15 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth.models import auth
 from .models import *
+from django.contrib.auth import get_user_model
 from django.http import HttpResponse
 
 # Create your views here.
 
 def feed(request):
-    feed_dict = {'feed':Post.objects.order_by('-post_time')}
+    User = get_user_model()
+    users = User.objects.all()
+    feed_dict = {'feed':Post.objects.order_by('-post_time'),'users':users}
     return render(request,'feed.html',feed_dict)
 
 def register(request):
@@ -37,3 +40,7 @@ def login(request):
         else:
             return HttpResponse('Invalid User')
     return render(request,'login.html')
+
+
+def tokens(request):
+    return render(request,'tokens.html')
