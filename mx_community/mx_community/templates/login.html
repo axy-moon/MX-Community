@@ -12,12 +12,16 @@
    
         <div class="reg-logo">
          <img src="{% static '/img/register_logo.png' %}">
-        <div>
-
-        </div>            
+        </div>
+                  
             <div class="reg-form" style="width:400px;">
+                <div class="leftimg">
+                    <img src="{% static '/img/login_illustr.svg' %}">
+        
+                </div> 
             <form action="" method="POST">
                 {% csrf_token %}
+
                 <div class="form">
                 <div class="form-left">
                     <p>Roll Number</p>
@@ -35,9 +39,9 @@
                 </div>
             </form>
             </div>
-        </div> 
+        
         
            
-      </nav>
+     
 </body>
 </html>
