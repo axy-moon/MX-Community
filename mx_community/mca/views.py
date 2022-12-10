@@ -1,12 +1,13 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth.models import auth
-from .models import NewUser
+from .models import *
 from django.http import HttpResponse
 
 # Create your views here.
 
 def feed(request):
-    return render(request,'feed.html')
+    feed_dict = {'feed':Post.objects.order_by('-post_time')}
+    return render(request,'feed.html',feed_dict)
 
 def register(request):
     if request.method == 'POST':

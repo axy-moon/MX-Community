@@ -27,14 +27,15 @@
                     <li><i class="fa-solid fa-newspaper"></i></li>
                     <li><i class="fa-solid fa-message"></i></li>
                     <li><i class="fa-solid fa-users"></i></li>
-                </ul>
+                  </ul>
               </div>  
-              {% if user.is_authenticated %}
+
+
               <div class="nav-user-icon online">
                 <img src="{% static '/img/user.png' %}">
-                <li><p>{{user.first_name}}</p></li>
               </div>
-              {% endif %} 
+              <i class="fa-solid fa-right-from-bracket"></i>
+             
           </nav>
     <section>
         {% block page %}

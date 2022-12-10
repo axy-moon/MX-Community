@@ -51,9 +51,17 @@ nav{
     border-radius: 50%;
     cursor: pointer;
 }
-.nav-user-icon{
-    margin-left: 30px;
+
+i {
+    font-size: 24px;
+    color: #fff;
 }
+
+.user-info {
+    display: flex;
+    justify-content: space-between;
+}
+
 .search-box{
     background: #efefef;
     width: 350px;
@@ -260,6 +268,10 @@ nav{
     background: transparent;
     resize: none;
 
+}
+
+.post-title {
+    padding: 30px 0px 10px 0px;
 }
 .add-post-links{
     display: flex;
