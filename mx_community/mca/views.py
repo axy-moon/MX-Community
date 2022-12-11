@@ -5,6 +5,8 @@ from django.contrib.auth import get_user_model
 from django.http import HttpResponse
 
 # Create your views here.
+def home(request):
+    return render(request,'home.html')
 
 def feed(request):
     User = get_user_model()
