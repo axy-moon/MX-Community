@@ -19,3 +19,12 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
+
+class tokens(models.Model):
+    roll_no = models.CharField(max_length=7,null=False,unique=True,verbose_name='Roll No')
+    first_name = models.CharField(max_length=50,verbose_name='First Name')
+    last_name = models.CharField(max_length=50,verbose_name='Last Name')
+
+    def __str__(self):
+        return self.roll_no
+

@@ -44,5 +44,7 @@ def login(request):
     return render(request,'login.html')
 
 
-def tokens(request):
-    return render(request,'tokens.html')
+def token(request):
+    names = tokens.objects.order_by('roll_no')
+    d = {'token':names}
+    return render(request,'tokens.html',d)

@@ -393,12 +393,17 @@ i {
 
 .token-box {
     display: flex;
-    border: 1px solid red;
     justify-content: space-between;
     align-items: center;
     padding: 15px;
     border-radius: 10px;
     background-color: aliceblue;
+    box-shadow:
+    1.5px 6.4px 3.6px rgba(0, 0, 0, 0.025),
+    4.3px 17.8px 10px rgba(0, 0, 0, 0.035),
+    10.3px 42.8px 24.1px rgba(0, 0, 0, 0.046),
+    34px 142px 80px rgba(0, 0, 0, 0.07);
+    margin-bottom: 10px;
 }
 
 .token-box p {
@@ -413,7 +418,8 @@ i {
 .token-box button {
     width: 100px;
     height: 30px;
-    background-color: #5BB318;
+    background-color: #40800f;
     border: none;
     border-radius: 5px;
+    color: #fff;
 }

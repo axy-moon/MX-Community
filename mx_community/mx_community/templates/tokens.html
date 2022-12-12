@@ -6,19 +6,19 @@
 
     <div class="tokens-container">
         <h1>Tokens</h1>
-    
+        {% for i in token %}
         <div class="token-box">
             <div class="user-profile">
                 <img src="{% static '/img/user.png' %}" alt="">
-                <p>{{user.get_full_name}}</p>
+                <p>{{i.first_name}} <br><span>{{i.roll_no}}</span></p>
+                
             </div>
             <div class="buttons">
-                <button>Message</button>
-                <button>View Profile</button>
+                <button type="button" style="background-color:#1F4690;">Message</button>
+                <button type="button" >View Profile</button>
             </div>
-
         </div>
-    
+        {% endfor %}
     </div>
 
 {% endblock %}

@@ -5,3 +5,4 @@ from .models import *
 
 admin.site.register(NewUser)
 admin.site.register(Post)
+admin.site.register(tokens)
