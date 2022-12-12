@@ -5,31 +5,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&family=Open+Sans:wght@800&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="{% static 'css/home.css'%}">
     <title>MX Community</title>
 </head>
 <body>
     <nav>
-        <img src="{% static '/img/home_logo.png'%}" alt="">
-        
-    </nav>
-    <!-- <div>
         <h1>MX COMMUNITY</h1>
-    </div> -->
-    <div class="container">
-        <div>
-            <img src="{% static '/img/home.svg'%}" alt="">
+        <div class="nav-links">
+            <p>HOME</p>
+            <p>REGISTER</p>
+            <p>SIGN IN</p>
+            <p>ABOUT</p>
+            <p></p>
         </div>
-        <div>
-            <div class="main-text">
-                <div class="typewriter">
-                    <h1>Hello Mxians</h1>
-                </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea blanditiis facere quisquam fugiat ipsam eum, qui molestiae delectus ullam, temporibus optio vero quis nihil voluptatem provident nostrum distinctio? Tenetur, sed?</p>
-                <button>Login</button>
-                <button>Register</button>
-            
+    </nav>
+    <div class="container">
+     
+        <div class="left">
+            <div class="textbox">
+                <p style="line-height: 1.0; margin: 0;">Department of Computer Application presents</p>
+                <h1>MX COMMUNITY</h1>
+                <p>A Virtual Community created exclusively for the students of Department of Computer Application. A Social Network platform for all the students to interact with each another and with their alumni.</p>
+                <button type="button">Get Started</button>
             </div>
+        </div>
+        <div class="right">
+            <img src="{% static '/img/home.svg' %}" alt="">
         </div>
     </div>
 </body>

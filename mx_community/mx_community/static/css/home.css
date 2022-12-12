@@ -4,52 +4,84 @@
     
 }
 
-.typewriter h1 {
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid orange; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
-    font-size: 60px;
-    animation: 
-      typing 3.5s steps(40, end),
-      blink-caret .75s step-end infinite;
-  }
-  
-  /* The typing effect */
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-  
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: orange; }
-  }
-
-  .container {
-    display: grid;
-    place-items: center;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 40px;
-    position: relative;
-    height: 600px;
-  }
-
-  .main-text {
-    margin: 0;
-    top: 50%;
-    transform: translateY(-80%);
-  }
-
-.main-text button {
-    width: 8rem;
-    height: 2rem;
-    border: none;
+* {
+  font-family: 'Montserrat', sans-serif;
 }
 
-.main-text button:first-of-type {
-    background-color: var(--thColor);
-    color: #fff;
+body {
+  background-color: var(--bdyColor);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-links p {
+  flex: 1;
+  display: inline-block;
+  align-items: center;
+  padding-top: 8px;
+  padding-left: 16px;
+  cursor: pointer;
+}
+
+nav , .container {
+  width: 90%;
+  margin: auto;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 85vh;
+
+}
+
+.left {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.textbox h1 {
+  font-family: 'Open Sans',sans-serif;
+  font-size: 52px;
+  font-weight: 700;
+  margin: 0;
+  color: var(--thColor);
+}
+
+.textbox p {
+  line-height: 1.9;
+  margin-top: 0;
+}
+
+.left button {
+  width: 160px;
+  height: 40px;
+  border: 2px solid black;
+  border-radius: 6px;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.left button:hover {
+  background-color: var(--thColor);
+  color: white;
+}
+
+.left .textbox {
+  width: 70%;
+}
+
+.right {
+  display: flex;
+  justify-content: space-around;
+}
+
+.right img {
+  width: 80%;
 }

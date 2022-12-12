@@ -3,6 +3,7 @@ from django.contrib.auth.models import auth
 from .models import *
 from django.contrib.auth import get_user_model
 from django.http import HttpResponse
+from json import dumps
 
 # Create your views here.
 def home(request):
