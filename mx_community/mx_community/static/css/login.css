@@ -52,14 +52,10 @@ nav , .container {
     width: 100%;
     margin: auto;
     display: flex;
-<<<<<<< HEAD
-    
-=======
     justify-content: space-around;
     /* box-shadow: -3px 5px 11px -1px rgba(0,0,0,0.66);
     -webkit-box-shadow: -3px 5px 11px -1px rgba(0,0,0,0.66);
     -moz-box-shadow: -3px 5px 11px -1px rgba(0,0,0,0.66); */
->>>>>>> 8ce8993be926ea0e65d4025f3e25a8005fb51f6c
 }
 
 .reg-form form {
