@@ -22,6 +22,28 @@ nav{
     top: 0;
     z-index: 100;
 }
+
+.nav-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-icons p {
+    color: #fff;
+}
+
+.nico {
+    display: flex;
+    flex-direction: row;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.nico:hover {
+    opacity: 0.6;
+}
+
 .logo{
     width: 100px;
     margin-right: 90px;
@@ -41,7 +63,6 @@ nav{
     display: inline-block;
 }
 .nav-left ul li i {
-    color: #fff;
     font-size: 24px;
     margin: 0 15px;
 }
@@ -51,9 +72,17 @@ nav{
     border-radius: 50%;
     cursor: pointer;
 }
-.nav-user-icon{
-    margin-left: 30px;
+
+i {
+    font-size: 24px;
+    color: #F6F6F6;
 }
+
+.user-info {
+    display: flex;
+    justify-content: space-between;
+}
+
 .search-box{
     background: #efefef;
     width: 350px;
@@ -198,7 +227,7 @@ nav{
     bottom: 0;
     left: 0;
     width: 100%;
-    background: #1876f2;
+    background: #00C6C1;
     color: #fff;
     font-size: 10px;
     padding: 4px 0;
@@ -207,6 +236,10 @@ nav{
     width: 100%;
     margin-bottom: 20px;
     border-radius: 4px;
+}
+
+.conversation {
+    overflow-y: auto;
 }
 
 .online-list{
@@ -260,6 +293,10 @@ nav{
     background: transparent;
     resize: none;
 
+}
+
+.post-title {
+    padding: 30px 0px 10px 0px;
 }
 .add-post-links{
     display: flex;
@@ -340,4 +377,49 @@ nav{
     color: #626262;
     background-color: transparent;
     border-radius: 4px;
+}
+
+
+.tokens-container {
+    width: 75%;
+    margin: auto;
+}
+
+.tokens-container h1 {
+    text-align: center;
+    padding-top: 40px;
+    margin-bottom: 30px;
+}
+
+.token-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: aliceblue;
+    box-shadow:
+    1.5px 6.4px 3.6px rgba(0, 0, 0, 0.025),
+    4.3px 17.8px 10px rgba(0, 0, 0, 0.035),
+    10.3px 42.8px 24.1px rgba(0, 0, 0, 0.046),
+    34px 142px 80px rgba(0, 0, 0, 0.07);
+    margin-bottom: 10px;
+}
+
+.token-box p {
+    color: #000;
+}
+
+.token-box img {
+    border-radius: 50%;
+    width: 50px;
+}
+
+.token-box button {
+    width: 100px;
+    height: 30px;
+    background-color: #40800f;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
 }
