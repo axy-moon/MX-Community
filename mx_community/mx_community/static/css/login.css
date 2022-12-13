@@ -4,44 +4,62 @@
     
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins','sans-serif';
-    box-sizing: border-box;
-}
-body{
-    background: var(--thColor);
+* {
+  font-family: 'Montserrat', sans-serif;
 }
 
-.reg-logo {
+body {
+  background-color: var(--bdyColor);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-links p {
+  flex: 1;
+  display: inline-block;
+  align-items: center;
+  padding-top: 8px;
+  padding-left: 16px;
+  cursor: pointer;
+}
+
+nav , .container {
+  width: 90%;
+  margin: auto;
+}
+.container {
     display: grid;
-    place-items: center;
+    grid-template-columns: 40% 60%;
+    height: 88vh;
+
 }
 
-.reg-container {
+.illus {
     display: flex;
-    justify-content: space-between;
-  
-    
+    align-items: center;
 }
 
-.reg-container img {
-    width: 75%;
-    margin-top: 100px;
-    margin-right: 80px;
+.illus img {
+    width: 100%;
 }
 
 .reg-form {
-    background-color: #bababb;
     border-radius: 10px;
-    height: 60vh;
-    width: 50%;
-    box-shadow: -3px 5px 11px -1px rgba(0,0,0,0.66);
-    -webkit-box-shadow: -3px 5px 11px -1px rgba(0,0,0,0.66);
-    -moz-box-shadow: -3px 5px 11px -1px rgba(0,0,0,0.66);
+    background-color: transparent;
+    width: 100%;
+    margin: auto;
     display: flex;
+<<<<<<< HEAD
     
+=======
+    justify-content: space-around;
+    /* box-shadow: -3px 5px 11px -1px rgba(0,0,0,0.66);
+    -webkit-box-shadow: -3px 5px 11px -1px rgba(0,0,0,0.66);
+    -moz-box-shadow: -3px 5px 11px -1px rgba(0,0,0,0.66); */
+>>>>>>> 8ce8993be926ea0e65d4025f3e25a8005fb51f6c
 }
 
 .reg-form form {
@@ -49,9 +67,6 @@ body{
 }
 
 
-.reg-form p {
-    padding-bottom: 5px;
-}
 
 .reg-form input {
     margin-bottom: 20px;
@@ -61,6 +76,8 @@ body{
     border: none;
     padding: 10px;
     border-radius: 6px;
+    border: 1px solid #59c5e3;
+    width: 100%;
 
 }
 
@@ -81,17 +98,12 @@ form .submit-btn {
 form input[type=submit] {
     margin-top: 20px;
     width: 100%;
+    padding: 5px;
 }
+
 #register-btn
 {
-    border-radius: 5cm;
-    text-align: center;
+    border-radius: 5px;
     background-color: #181D31;
     color: #bababb;
-    padding-bottom: 25px;
-}
-.leftimg
-{
-    width: 25px;
-    height: 50px;
 }
