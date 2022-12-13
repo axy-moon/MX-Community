@@ -41,6 +41,7 @@ body{
     -webkit-box-shadow: -3px 5px 11px -1px rgba(0,0,0,0.66);
     -moz-box-shadow: -3px 5px 11px -1px rgba(0,0,0,0.66);
     display: flex;
+    
 }
 
 .reg-form form {
