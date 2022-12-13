@@ -26,6 +26,10 @@ nav {
   cursor: pointer;
 }
 
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+}
 nav , .container {
   width: 90%;
   margin: auto;

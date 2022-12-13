@@ -3,17 +3,13 @@ from django.contrib.auth.models import auth
 from .models import *
 from django.contrib.auth import get_user_model
 from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
 from json import dumps
 
 # Create your views here.
 def home(request):
     return render(request,'home.html')
 
-def feed(request):
-    User = get_user_model()
-    users = User.objects.all()
-    feed_dict = {'feed':Post.objects.order_by('-post_time'),'users':users}
-    return render(request,'feed.html',feed_dict)
 
 def register(request):
     if request.method == 'POST':
@@ -43,6 +39,18 @@ def login(request):
         else:
             return HttpResponse('Invalid User')
     return render(request,'login.html')
+
+def logout(request):
+    auth.logut(request)
+    return redirect('home')
+
+
+@login_required
+def feed(request):
+    User = get_user_model()
+    users = User.objects.all()
+    feed_dict = {'feed':Post.objects.order_by('-post_time'),'users':users}
+    return render(request,'feed.html',feed_dict)
 
 
 def token(request):
