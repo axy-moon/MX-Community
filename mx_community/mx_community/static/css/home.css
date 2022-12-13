@@ -72,7 +72,11 @@ nav , .container {
   cursor: pointer;
 }
 
-.left button:hover {
+.left a {
+  text-decoration: none;
+}
+
+.left button:hover{
   background-color: var(--thColor);
   color: white;
 }

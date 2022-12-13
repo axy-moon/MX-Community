@@ -28,7 +28,6 @@ def register(request):
 
 def login(request):
     if request.method == 'POST':
-        username = request.POST['username']
         password = request.POST['password']
         rollno = request.POST['rollno']
 
@@ -41,7 +40,7 @@ def login(request):
     return render(request,'login.html')
 
 def logout(request):
-    auth.logut(request)
+    auth.logout(request)
     return redirect('home')
 
 
@@ -52,7 +51,7 @@ def feed(request):
     feed_dict = {'feed':Post.objects.order_by('-post_time'),'users':users}
     return render(request,'feed.html',feed_dict)
 
-
+@login_required
 def token(request):
     names = tokens.objects.order_by('roll_no')
     d = {'token':names}

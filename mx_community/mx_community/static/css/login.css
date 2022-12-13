@@ -109,10 +109,6 @@ form input[type=submit]:hover {
     background-color: #000;
     color: #fff;
 }
-
-#register-btn
-{
-    border-radius: 5px;
-    background-color: #181D31;
-    color: #bababb;
+#register-btn {
+    margin-top: 40px;
 }

@@ -9,13 +9,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&family=Open+Sans:wght@800&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <title>MX Community | Login</title>
+    <title>MX CONNECT | Login</title>
 </head>
 <body>
    
       
     <nav>
-        <h1>MX COMMUNITY</h1>
+        <h1>MX CONNECT</h1>
         <div class="nav-links">
             <p> <a href="{% url 'home' %}">HOME</a></p>
             <p><a href="{% url 'register' %}">REGISTER</a></p>
@@ -24,6 +24,12 @@
             <p></p>
         </div>
     </nav>
+            <div class="container">
+            
+                <div class="illus">
+                <img src="{% static '/img/login.svg' %}" alt="">
+            </div>
+            
             <div class="reg-form">
                 <!-- <div class="leftimg">
                     <img src="{% static '/img/login_illustr.svg' %}">
@@ -32,23 +38,19 @@
             <form action="" method="POST">
                 {% csrf_token %}
 
-                <div class="form">
                 <div class="form-left">
                     <p>Roll Number</p>
                     <input type="text" name="rollno" id="" required>
                     
-                    <p>Username</p>
-                    <input type="text" name="username" id="">
-                    
                     <p>Password</p>
                     <input type="password" name="password" id="">
                 </div>
-            </div>
                 <div class="submit-btn" style="width:55%">
                     <input type="submit" name="register-btn" id="register-btn" value="Login">
                 </div>
             </form>
             </div>
+        </div>
         
         
            
