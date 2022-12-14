@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.db.models.deletion import CASCADE, SET_DEFAULT
-
+from datetime import timezone
 
 # Create your models here.
 
