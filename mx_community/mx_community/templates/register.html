@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/css/login.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&family=Open+Sans:wght@800&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <title>MX Community | Register</title>
+</head>
+<body>
+
+    <nav>
+        <h1>MX COMMUNITY</h1>
+        <div class="nav-links">
+            <p>HOME</p>
+            <p>REGISTER</p>
+            <p>SIGN IN</p>
+            <p>ABOUT</p>
+            <p></p>
+        </div>
+    </nav>
+   
+       
+            <div class="container">
+                <div class="illus">
+                    <img src="{% static '/img/reg.svg' %}" alt="">
+                </div>
+
+            
+            <div class="reg-form">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="form">
+
+                <div class="form-left">
+                    <p>Roll Number</p>
+                    <input type="text" name="rollno" id="">
+                    <p>Username</p>
+                    <input type="text" name="username" id="">
+                    
+                    <p>Password</p>
+                    <input type="password" name="password" id="">
+                </div>
+
+                <div class="form-right">
+                    <p>First Name</p>
+                    <input type="text" name="firstname" id="">
+                    
+                    <p>Last Name</p>
+                    <input type="text" name="lastname" id="">
+                    
+                    <p>Email</p>
+                    <input type="email" name="email" id="">
+                </div>
+            </div>
+                <div class="submit-btn">
+                    <input type="submit" name="register-btn" id="" value="Register">
+                </div>
+            </form>
+            </div>
+    </div>
+</body>
+</html>

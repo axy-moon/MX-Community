@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/css/login.css' %}">
+    <title>MX Community | Login</title>
+</head>
+<body>
+   
+        <div class="reg-logo">
+        <h1>MX COMMUNITY</h1>
+        </div>
+                  
+            <div class="reg-form">
+                <!-- <div class="leftimg">
+                    <img src="{% static '/img/login_illustr.svg' %}">
+        
+                </div> --> 
+            <form action="" method="POST">
+                {% csrf_token %}
+
+                <div class="form">
+                <div class="form-left">
+                    <p>Roll Number</p>
+                    <input type="text" name="rollno" id="" required>
+                    
+                    <p>Username</p>
+                    <input type="text" name="username" id="">
+                    
+                    <p>Password</p>
+                    <input type="password" name="password" id="">
+                </div>
+            </div>
+                <div class="submit-btn" style="width:55%">
+                    <input type="submit" name="register-btn" id="register-btn" value="Login">
+                </div>
+            </form>
+            </div>
+        
+        
+           
+     
+</body>
+</html>
