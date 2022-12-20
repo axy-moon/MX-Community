@@ -1,8 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.db.models.deletion import CASCADE, SET_DEFAULT
-
-
+from django.utils import timezone
 # Create your models here.
 
 class NewUser(AbstractUser):
@@ -11,8 +10,8 @@ class NewUser(AbstractUser):
 
 class Post(models.Model):
     author = models.ForeignKey(NewUser,on_delete=CASCADE)
-    title = models.CharField(max_length=30,default='Post')
-    post_time = models.DateTimeField()
+    title = models.CharField(max_length=30,default='Question')
+    post_time = models.DateTimeField(default=timezone.now)
     content = models.TextField()
     comment = models.TextField(blank=True)
 

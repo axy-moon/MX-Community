@@ -242,7 +242,7 @@ i {
 }
 
 .conversation {
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 .online-list{
@@ -288,7 +288,7 @@ i {
     padding-left: 55px;
     padding-top: 20px;
 }
-.post-input-container textarea{
+.post-input-container textarea {
     width: 100%;
     border: 0;
     outline: 0;
@@ -296,6 +296,16 @@ i {
     background: transparent;
     resize: none;
 
+}
+
+.post-input-container input {
+    width: 60%;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid #ccc;
+    background: transparent;
+    margin-bottom: 20px;
+    font-size: 14px;
 }
 
 .post-title {
@@ -314,8 +324,10 @@ i {
     margin-right: 30px;
     font-size: 13px;
 }
-.add-post-links a img{
+.add-post-links i{
     width: 20px;
+    font-size: 18px;
+    color: black;
     margin-right: 10px;
 }
 .post-container{
@@ -331,7 +343,7 @@ i {
     color: #9a9a9a;
 }
 .post-text{
-    color: #9a9a9a;
+    color: #242424;
     margin: 15px 0;
     font-size: 15px;
 }
