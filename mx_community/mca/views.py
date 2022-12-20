@@ -48,6 +48,7 @@ def logout(request):
 def feed(request):
     User = get_user_model()
     users = User.objects.all()
+    print(users)  
     feed_dict = {'feed':Post.objects.order_by('-post_time'),'users':users}
     return render(request,'feed.html',feed_dict)
 
