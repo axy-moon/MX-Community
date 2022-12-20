@@ -40,15 +40,15 @@
                 </div>
             </div>
             <div class="post-input-container">
-                <form action="" onfocus="">
-                <textarea rows="3" placeholder="What's your question?"></textarea>
+                <form action="" method="POST" onfocus="" id="post-form">
+                    {% csrf_token %}
+                    <textarea rows="4" placeholder="What's your Question?"></textarea>
                 </form>
                 <div class="add-post-links">
-                    <a href="#"> <img src="/images/live-video.png" alt="">Post</a>
-                    <a href="#"> <img src="/images/photo.png" alt="">Photo</a>
+                    <a href="#" onclick="createPost()">Post</a>
+                    <a href="#"> <img src="/images/photo.png" alt="">Add Photo</a>
                     <a href="#"> <img src="/images/feeling.png" alt=""></a>
                 </div>
-
 
             </div>
 
