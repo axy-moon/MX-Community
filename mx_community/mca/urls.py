@@ -8,7 +8,7 @@ urlpatterns = [
     path('tokens/',views.token,name='tokens'),
     path('',views.home,name='home'),
     path('logout',views.logout,name = 'logout')
-    #path('messages',views.messages,name='messages'),
+    path('messages',views.messages,name='messages'),
     #path('search',views.search,name='search'),
     
 ]

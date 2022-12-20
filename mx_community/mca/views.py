@@ -56,3 +56,7 @@ def token(request):
     names = tokens.objects.order_by('roll_no')
     d = {'token':names}
     return render(request,'tokens.html',d)
+
+@login_required
+def messages(request):
+    return render(request,'messages.html')
