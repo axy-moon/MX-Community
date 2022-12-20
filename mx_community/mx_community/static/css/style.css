@@ -242,7 +242,7 @@ i {
 }
 
 .conversation {
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 .online-list{
@@ -343,7 +343,7 @@ i {
     color: #9a9a9a;
 }
 .post-text{
-    color: #9a9a9a;
+    color: #242424;
     margin: 15px 0;
     font-size: 15px;
 }
