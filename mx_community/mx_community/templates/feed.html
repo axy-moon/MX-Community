@@ -36,17 +36,16 @@
                 <div>
                     <p style="text-transform: capitalize;">{{user.get_full_name}}</p>
                     <small>Student</small>
-                    <i class="fa-sharp fa-solid fa-caret-down"></i>
                 </div>
             </div>
             <div class="post-input-container">
                 <form action="" method="POST" onfocus="" id="post-form">
                     {% csrf_token %}
-                    <textarea rows="4" placeholder="What's your Question?" name="postcontent"></textarea>
+                    <textarea rows="4" required placeholder="What's your Question?" name="postcontent"></textarea>
                 </form>
                 <div class="add-post-links">
-                    <a href="#" onclick="createPost()">Post</a>
-                    <a href="#"> <img src="/images/photo.png" alt="">Add Photo</a>
+                    <a href="#" onclick="createPost()">Post<i class="fa-solid fa-paper-plane"></i></a>
+                    <a href="#">Add Photo  <i class="fa-solid fa-image"></i></a>
                     <a href="#"> <img src="/images/feeling.png" alt=""></a>
                 </div>
 
@@ -130,7 +129,7 @@
             <h4>Conversation</h4>
             <a href="#" id="hidechat" onclick="showChat()">Show Chats</a>
         </div>
-        <div class="conversation" id="conversation" style="display:none;">
+        <div class="conversation" id="conversation">
         {% for i in users %}
         <div class="online-list">
             <div class="online">

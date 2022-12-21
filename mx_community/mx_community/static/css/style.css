@@ -28,6 +28,7 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 56px;
 }
 
 .nav-icons p {
@@ -47,7 +48,6 @@ nav{
 
 .logo{
     width: 100px;
-    margin-right: 90px;
 }
 .nav-left, .nav-right{
     display: flex;
@@ -69,7 +69,7 @@ nav{
 }
 .nav-user-icon img{
     margin-left: 40px;
-    width: 40px;
+    width: 30px;
     border-radius: 50%;
     cursor: pointer;
 }
@@ -123,8 +123,8 @@ i {
     display: flex;
     justify-content: space-between;
     padding: 13px 5%;
-
 }
+
 .left-sidebar{
 
     flex-basis: 25%;
@@ -242,7 +242,9 @@ i {
 }
 
 .conversation {
+    display: none;
     overflow-y: scroll;
+    height: auto;
 }
 
 .online-list{
@@ -265,11 +267,12 @@ i {
 }
 .write-post-container{
     width: 100%;
-    background: #F6F6F6;
+    background: #fff;
     border-radius: 6px;
     padding: 20px;
     color: #626262;
 }
+
 .user-profile{
     display: flex;
     align-items: center;
@@ -325,9 +328,10 @@ i {
     font-size: 13px;
 }
 .add-post-links i{
-    width: 20px;
-    font-size: 18px;
-    color: black;
+    font-size: 16px;
+    padding-left: 5px;
+    color: #626262;
+    margin: 0;
     margin-right: 10px;
 }
 .post-container{
