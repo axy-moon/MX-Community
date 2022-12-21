@@ -47,12 +47,31 @@ def logout(request):
 @login_required
 def feed(request):
     User = get_user_model()
+    if request.method == 'POST':
+        content = request.POST['postcontent']
+        current_user = request.user
+        author = NewUser.objects.get(rollno=current_user.rollno)
+
+        Post.objects.create(author=author,content=content)
+        return redirect('feed')
+   
     users = User.objects.all()
+    print(users)  
     feed_dict = {'feed':Post.objects.order_by('-post_time'),'users':users}
     return render(request,'feed.html',feed_dict)
 
 @login_required
 def token(request):
-    names = tokens.objects.order_by('roll_no')
+    current_user = request.user
+    roll_t = current_user.rollno[-1]
+    print(roll_t)
+    names = tokens.objects.filter(roll_no__endswith=roll_t)
+    print(names)
     d = {'token':names}
     return render(request,'tokens.html',d)
+
+@login_required
+def messages(request):
+    return render(request,'messages.html')
+
+    

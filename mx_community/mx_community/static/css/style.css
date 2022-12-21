@@ -28,6 +28,7 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 56px;
 }
 
 .nav-icons p {
@@ -47,7 +48,6 @@ nav{
 
 .logo{
     width: 100px;
-    margin-right: 90px;
 }
 .nav-left, .nav-right{
     display: flex;
@@ -69,7 +69,7 @@ nav{
 }
 .nav-user-icon img{
     margin-left: 40px;
-    width: 40px;
+    width: 30px;
     border-radius: 50%;
     cursor: pointer;
 }
@@ -123,8 +123,8 @@ i {
     display: flex;
     justify-content: space-between;
     padding: 13px 5%;
-
 }
+
 .left-sidebar{
 
     flex-basis: 25%;
@@ -242,7 +242,9 @@ i {
 }
 
 .conversation {
-    overflow-y: auto;
+    display: none;
+    overflow-y: scroll;
+    height: auto;
 }
 
 .online-list{
@@ -265,11 +267,12 @@ i {
 }
 .write-post-container{
     width: 100%;
-    background: #F6F6F6;
+    background: #fff;
     border-radius: 6px;
     padding: 20px;
     color: #626262;
 }
+
 .user-profile{
     display: flex;
     align-items: center;
@@ -288,7 +291,7 @@ i {
     padding-left: 55px;
     padding-top: 20px;
 }
-.post-input-container textarea{
+.post-input-container textarea {
     width: 100%;
     border: 0;
     outline: 0;
@@ -296,6 +299,16 @@ i {
     background: transparent;
     resize: none;
 
+}
+
+.post-input-container input {
+    width: 60%;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid #ccc;
+    background: transparent;
+    margin-bottom: 20px;
+    font-size: 14px;
 }
 
 .post-title {
@@ -314,8 +327,11 @@ i {
     margin-right: 30px;
     font-size: 13px;
 }
-.add-post-links a img{
-    width: 20px;
+.add-post-links i{
+    font-size: 16px;
+    padding-left: 5px;
+    color: #626262;
+    margin: 0;
     margin-right: 10px;
 }
 .post-container{
@@ -331,7 +347,7 @@ i {
     color: #9a9a9a;
 }
 .post-text{
-    color: #9a9a9a;
+    color: #242424;
     margin: 15px 0;
     font-size: 15px;
 }

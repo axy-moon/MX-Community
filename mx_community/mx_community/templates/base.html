@@ -10,13 +10,17 @@
     <link rel="stylesheet" href="{% static '/css/style.css' %}">
     <script src="https://kit.fontawesome.com/5aa39777c0.js" crossorigin="anonymous"></script>
     <title> {% block title %} {% endblock %} </title>
+    <script src="{% static '/js/feed.js'%}"></script>
 </head>
 <body>
         <nav>
             <div class="nav-right">
                 <img src="{% static '/img/logo.png' %}" class="logo">
                 
+<<<<<<< HEAD
       
+=======
+>>>>>>> 7543ae9d5a640a27ee66d63e6366191a32ea5f37
                   
             </div>
             <div class="nav-left">
@@ -24,6 +28,7 @@
                   <div class="nav-icons">
                     <div class="nico">
                     <li><a href="{% url 'feed' %}"><i class="fa-solid fa-newspaper"></i></a></li>
+<<<<<<< HEAD
                     
                     </div>
                     <div class="nico">
@@ -35,6 +40,20 @@
                     <div class="nico">
                     <li><a href="{% url 'tokens' %}"><i class="fa-solid fa-users"></i></a></li>
                     
+=======
+      
+                    </div>
+                    <div class="nico">
+                     <li><a href=""><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                    </div>
+                    <div class="nico">
+                    <li><a href="{% url 'messages' %}"><i class="fa-solid fa-message"></i></a></li>
+              
+                    </div>
+                    <div class="nico">
+                    <li><a href="{% url 'tokens' %}"><i class="fa-solid fa-users"></i></a></li>
+          
+>>>>>>> 7543ae9d5a640a27ee66d63e6366191a32ea5f37
                     </div>
                   </div>
                   </ul>
