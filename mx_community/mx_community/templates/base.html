@@ -16,10 +16,7 @@
             <div class="nav-right">
                 <img src="{% static '/img/logo.png' %}" class="logo">
                 
-              <div class="search-box">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                  <input type="text" placeholder="search">
-              </div>
+      
                   
             </div>
             <div class="nav-left">
@@ -27,15 +24,17 @@
                   <div class="nav-icons">
                     <div class="nico">
                     <li><a href="{% url 'feed' %}"><i class="fa-solid fa-newspaper"></i></a></li>
-                    <p>Feed</p>
+                    
                     </div>
                     <div class="nico">
                     <li><a href="#"><i class="fa-solid fa-message"></i></a></li>
-                    <p>Messages</p>
+                    
+                    <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                    
                     </div>
                     <div class="nico">
                     <li><a href="{% url 'tokens' %}"><i class="fa-solid fa-users"></i></a></li>
-                    <p>Tokens</p>
+                    
                     </div>
                   </div>
                   </ul>
