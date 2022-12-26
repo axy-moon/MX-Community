@@ -49,10 +49,11 @@ def feed(request):
     User = get_user_model()
     if request.method == 'POST':
         content = request.POST['postcontent']
+        title = request.POST['postTitle']
         current_user = request.user
         author = NewUser.objects.get(rollno=current_user.rollno)
 
-        Post.objects.create(author=author,content=content)
+        Post.objects.create(author=author,content=content,title=title)
         return redirect('feed')
    
     users = User.objects.all()
@@ -74,4 +75,6 @@ def token(request):
 def messages(request):
     return render(request,'messages.html')
 
-    
+@login_required
+def profile(request):
+    return render(request,'profile.html')

@@ -31,13 +31,17 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'daphne',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'mca'
+    'mca',
+    'chat',
+    'channels'
+    
 ]
 
 MIDDLEWARE = [
@@ -68,7 +72,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'mx_community.wsgi.application'
+#WSGI_APPLICATION = 'mx_community.wsgi.application'
+ASGI_APPLICATION = 'mx_community.asgi.application'
 
 
 # Database

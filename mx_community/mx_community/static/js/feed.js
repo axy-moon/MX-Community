@@ -14,3 +14,7 @@ function showChat() {
         chats.style.display = 'block';
 
     }
+function inputTitle() {
+    var titleInput = document.getElementById('post-title');
+    titleInput.style.display = 'flex';
+}

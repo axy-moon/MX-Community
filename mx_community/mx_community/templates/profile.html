@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} MX NETWORK | Profile {% endblock %}
+
+{% block page %}
+<div class="profile-page">
+    <div class="profile-container">
+        <div class="profile-left">
+            <div class="profile-info">
+                <img src="{% static '/img/user.png'%}" alt="">
+                <div class="work-info">
+                <h3>Work</h3>
+                <hr>
+                <h4>Workplace 1</h4>
+                <p>Roles and stuff</p>
+                <h4>Workplace 2</h4>
+                <p>Roles and stuff</p>
+                
+            </div>
+                <div class="skills-info">
+                    <h3>Skills</h3>
+                    <hr>
+                    <p>Skill 1</p>
+                    <p>Skill 2</p>
+                    <p>Skill 3</p>
+                    <p>Skill 4</p>
+                    </div>
+            </div>
+        </div>
+        <div class="profile-right">
+            <div class="personal-info">
+                <h1>Augxy Moon</h1>
+                <p class="name">22MX108</p>
+                <div class="profile-btns">
+                    <button><i class="fa-solid fa-message"></i>Send Message</button>
+                </div>
+            <div class="about">
+                <h2>About</h2>
+                <hr>
+              
+                <table>
+                    <tr>
+                      <th align="left">CONTACT INFORMATION</th>
+                    </tr>
+                    <tr>
+                      <td valign="top">Phone: </td>
+                      <td  class="blue">+91 9489443153</td>
+                    </tr>
+                    <tr>
+                      <td valign="top">Address: </td>
+                      <td>Christ Nager Poothurai <br>Kanyakumari Dt <br>PIN: 629176</td>
+                    </tr>
+                    <tr>
+                      <td valign="top">Email: </td>
+                      <td  class="blue">augxy666@gmail.com</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                      <th align="left">BASIC INFORMATION</th>
+                    </tr>
+                    <tr>
+                      <td valign="top">Birthday: </td>
+                      <td>Aug 08 2001</td>
+                    </tr>
+                    <tr>
+                      <td valign="top">Gender: </td>
+                      <td>Male</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

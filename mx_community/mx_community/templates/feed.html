@@ -41,14 +41,26 @@
             <div class="post-input-container">
                 <form action="" method="POST" onfocus="" id="post-form">
                     {% csrf_token %}
-                    <textarea rows="4" required placeholder="What's your Question?" name="postcontent"></textarea>
+                    <textarea rows="4" required placeholder="What's your Question?" name="postcontent" oninput="inputTitle()"></textarea>
+                    <div class="post-title" id="post-title" style="display:none;">
+                        <input type="text" name="postTitle"  placeholder="Title" style="margin-right: 10px;">
+                        <select name="" id="" placeholder="Post type">
+                            <option value="">Category</option>
+                            <option value="Question">Question</option>
+                            <option value="Internship">Internship</option>
+                            <option value="Placements">Placements</option>
+                            <option value="Resources">Resources</option>
+                            <option value="Academics">Academics</option>
+                        </select>
+                    </div>
                 </form>
+                
                 <div class="add-post-links">
                     <a href="#" onclick="createPost()">Post<i class="fa-solid fa-paper-plane"></i></a>
                     <a href="#">Add Photo  <i class="fa-solid fa-image"></i></a>
                     <a href="#"> <img src="/images/feeling.png" alt=""></a>
                 </div>
-
+                
             </div>
 
         </div>
