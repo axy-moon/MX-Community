@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-    {% load static %}
+{% load static %}
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&family=Open+Sans:wght@800&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-
+    <script src="{% static '/js/feed.js'%}"></script>
     <title>MX NETWORK | Register</title>
 </head>
 <body>
@@ -39,12 +40,12 @@
 
                 <div class="form-left">
                     <p>Roll Number</p>
-                    <input type="text" name="rollno" id="" required>
+                    <input type="text" name="rollno" id="regroll" required onblur="rollVal()">
                     <p>Username</p>
-                    <input type="text" name="username" id="" required>
+                    <input type="text" name="username" id="reguname"required>
                     
                     <p>Password</p>
-                    <input type="password" name="password" id="" required>
+                    <input type="password" name="password"  id="regpassword" onblur="regpass()"required>
                 </div>
 
                 <div class="form-right">

@@ -14,7 +14,32 @@ function showChat() {
         chats.style.display = 'block';
 
     }
-function inputTitle() {
-    var titleInput = document.getElementById('post-title');
-    titleInput.style.display = 'flex';
+
+function rollVal()
+{
+    var regroll = document.getElementById("regroll").value;
+    var regex=/[1-9]{2}MX[0-9]{3}/;
+    if(regex.test(regroll)==true)
+    {
+        
+    }
+    else
+    {
+        alert("Enter a valid Roll Number");
+    }
 }
+
+function regpass()
+{
+    var regpassword=document.getElementById("regpassword").value;
+    var regex=/[1-9]{2}mx[0-9]{3}/;
+    if(regex.test(regpassword)==true)
+    {
+       
+    }
+    else
+    {
+         alert("Incorrect Password");
+    }
+}
+
