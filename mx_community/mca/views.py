@@ -55,7 +55,6 @@ def feed(request):
 
         Post.objects.create(author=author,content=content,title=title)
         return redirect('feed')
-   
     users = User.objects.all()
     print(users)  
     feed_dict = {'feed':Post.objects.order_by('-post_time'),'users':users}
