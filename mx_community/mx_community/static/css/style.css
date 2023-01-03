@@ -2,6 +2,9 @@
     --thColor: #181D31;
     --bdyColor: #D6E4E5;
     --secColor: #465362;
+    --boxColor: #F6F6F6;
+    --spanColor: #1876f2;
+    --greyText: #6B728E;
 }
 
 *{
@@ -13,6 +16,7 @@
 body{
     background: var(--bdyColor);
 }
+
 nav{
     display: flex;
     align-items: center;
@@ -311,6 +315,16 @@ i {
     font-size: 14px;
 }
 
+.post-input-container select {
+    width: 40%;
+    border: 0;
+    outline: none;
+    border-bottom: 1px solid #ccc;
+    background: transparent;
+    margin-bottom: 20px;
+    color: rgb(105, 105, 105);
+}
+
 .post-title {
     padding: 30px 0px 10px 0px;
 }
@@ -369,6 +383,13 @@ i {
     width: 18px;
     margin-right: 10px;
 }
+
+.activity-icons i {
+    color: var(--greyText);
+    font-size: 18px;
+    padding-right: 10px;
+}
+
 .activity-icons div{
     display: inline-flex;
     align-items: center;
@@ -441,4 +462,94 @@ i {
     border: none;
     border-radius: 5px;
     color: #fff;
+}
+
+.profile-page {
+    width: 90%;
+    margin: auto;
+}
+
+.profile-container {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-gap: 10px;
+    height: 89vh;
+    margin-top: 10px;
+}
+
+.profile-left , .profile-right {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--boxColor);
+    border-radius: 6px;
+}
+
+
+.profile-info {
+    padding: 48px;
+}
+.profile-info  p {
+    padding: 3px;
+    color: #6B728E;
+}
+.profile-info h4 {
+    padding-top: 8px;
+}
+.profile-info hr {
+    border: 1px solid rgb(194, 194, 194);
+}
+
+.profile-info .work-info  {
+    margin-top: 20px;
+}
+
+.name {
+    color: var(--spanColor);
+}
+
+.profile-right .personal-info {
+    font-family: 'Montserrat', sans-serif;
+    margin: 48px;
+}
+.profile-right .pro-btn {
+    display: flex;
+}
+.profile-right .profile-btns button {
+    width: 160px;
+    /* font-size: 14px; */
+    height: auto;
+    border: none;
+    outline: none;
+    margin-top: 20px;
+    border-radius: 8px;
+    color: #fff;
+    background-color: #00C6C1;
+    margin-right: 10px;
+}
+.profile-right .profile-btns i {
+    color:#fff;
+    padding: 8px;
+    padding-top: 12px;
+    font-size: 18px;
+}
+
+.profile-right .about {
+    margin-top: 100px;
+}
+
+.about table th {
+    color: var(--greyText);
+}
+
+.about table {
+    width: 400px;
+    table-layout: fixed;
+    margin-bottom: 20px;
+}
+.about table td {
+    padding-top: 18px;
+}
+
+.about table .blue {
+    color: var(--spanColor);
 }
