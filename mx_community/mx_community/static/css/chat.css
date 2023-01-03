@@ -86,6 +86,9 @@ nav i {
     justify-content: space-between;
 }
 
+.user_info span {
+  color: #000;
+}
 
 .online{
     position: relative;
@@ -112,7 +115,7 @@ nav i {
 .card {
   height: 90%;
   border-radius: 15px !important;
-  background-color: rgba(0, 0, 0, 0.4) !important;
+  background-color: var(--boxColor) !important;
 }
 .contacts_body {
   padding: 0.75rem 0 !important;
@@ -193,8 +196,8 @@ nav i {
   background-color: rgba(0, 0, 0, 0.3);
 }
 .user_img {
-  height: 70px;
-  width: 70px;
+  height: 45px;
+  width: 45px;
   border: 1.5px solid #f5f6fa;
 }
 .user_img_msg {
@@ -204,8 +207,8 @@ nav i {
 }
 .img_cont {
   position: relative;
-  height: 70px;
-  width: 70px;
+  height: 55x;
+  width: 55px;
 }
 .img_cont_msg {
   height: 40px;
@@ -273,18 +276,19 @@ nav i {
   position: absolute;
   left: 0;
   bottom: -15px;
-  color: rgba(255, 255, 255, 0.5);
+  color: #000;
   font-size: 10px;
 }
 .msg_time_send {
   position: absolute;
   right: 0;
   bottom: -15px;
-  color: rgba(255, 255, 255, 0.5);
+  color: #000;
   font-size: 10px;
 }
 .msg_head {
   position: relative;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 #action_menu_btn {
   position: absolute;
