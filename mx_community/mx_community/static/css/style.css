@@ -383,6 +383,13 @@ i {
     width: 18px;
     margin-right: 10px;
 }
+
+.activity-icons i {
+    color: var(--greyText);
+    font-size: 18px;
+    padding-right: 10px;
+}
+
 .activity-icons div{
     display: inline-flex;
     align-items: center;

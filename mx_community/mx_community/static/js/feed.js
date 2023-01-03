@@ -7,6 +7,11 @@ function createPost() {
         form.submit();
 }
 
+function inputTitle() {
+    var title = document.getElementById('post-title');
+    title.style.display = 'flex';
+}
+
 function showChat() {
     chats = document.getElementById('conversation');
 

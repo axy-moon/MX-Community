@@ -76,4 +76,7 @@ def messages(request):
 
 @login_required
 def profile(request):
+     
+    current_user = request.user
+    u = NewUser.objects.filter(rollno=current_user)
     return render(request,'profile.html')
