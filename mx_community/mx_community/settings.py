@@ -136,3 +136,9 @@ AUTH_USER_MODEL = 'mca.NewUser'
 
 LOGIN_REDIRECT_URL = 'feed'
 LOGIN_URL = 'login'
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND' : 'channels.layers.InMemoryChannelLayer',
+    }   
+}
