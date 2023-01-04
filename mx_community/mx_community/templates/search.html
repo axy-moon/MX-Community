@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} MX NETWORK | Search {% endblock %}
+
+{% block page %} 
+<div id="searchpage">
+        <form action="{% url 'search' %}" method="GET">
+        <div class="search-box" >
+            <img src="{% static 'img/search.png' %}">
+            <input type="text" placeholder="Search" name="q">
+           
+        </div>
+        <div class="search-submit">
+                <input type="submit" name="" id="">
+        </div>
+
+        <div>
+                {% for i in results %}
+                
+                <div class="result-box">
+
+                        <h4>{{i.author}}</h4>
+                        <p>{{i.title}}</p>
+                        <p>{{i.post_time | todate }}</p>
+                </div>
+                {% endfor %}
+
+        </div>
+        
+        </form>
+
+</div>
+        {% endblock %}

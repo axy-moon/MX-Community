@@ -87,7 +87,7 @@ nav i {
 }
 
 .user_info span {
-  color: #000;
+  color: #000 !important;
 }
 
 .online{

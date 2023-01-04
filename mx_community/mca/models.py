@@ -29,4 +29,8 @@ class tokens(models.Model):
 class profile(models.Model):
     username = models.ForeignKey(NewUser,on_delete=CASCADE)
     workplace = models.CharField(max_length=30,null=True)
-    phone = models.CharField(max_length=12,null=True)
+    phone = models.CharField(max_length=13,null=True)
+    address_line_1 = models.CharField(max_length=50,null=True)
+    address_line_2 = models.CharField(max_length=50,null=True)
+    pin = models.IntegerField()
+

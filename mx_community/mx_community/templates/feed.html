@@ -32,7 +32,7 @@
 
         <div class="write-post-container">
             <div class="user-profile">
-                <img src="{% static '/img/user.png' %}" alt="">
+                <a href="{% url 'profile' %}"><img src="{% static '/img/user.png' %}" alt=""></a>
                 <div>
                     <p style="text-transform: capitalize;">{{user.get_full_name}}</p>
                     <small>Student</small>
@@ -110,23 +110,23 @@
 
         <div class="event">
             <div class="left-event">
-                <h3>14</h3>
-                <span>december</span>
+                <h3>9</h3>
+                <span>January</span>
             </div>
             <div class="right-event">
-                <h4>Project Review</h4>
-                <p><i class="fa-solid fa-location-dot"></i></i>Psg college of technology</p>
+                <h4>CA Test</h4>
+                <p><i class="fa-solid fa-location-dot"></i></i>PSG CT</p>
                 <a href="#">More Info</a>
             </div>
         </div>
             <div class="event">
                 <div class="left-event">
-                    <h3>9</h3>
-                    <span>january</span>
+                    <h3>19</h3>
+                    <span>January</span>
                 </div>
                 <div class="right-event">
-                    <h4>CA test</h4>
-                    <p><i class="fa-solid fa-location-dot"></i>Psg college of technology</p>
+                    <h4>Semester Exam</h4>
+                    <p><i class="fa-solid fa-location-dot"></i>PSG CT</p>
                     <a href="#">More Info</a>
                 </div>
         </div>

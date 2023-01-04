@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %} MX NETWORK | Profile {% endblock %}
+
+{% block page %}
+
+
+    <div class="post-input-container">
+        <form action="" method="POST" id="profile-form">
+            <div class="form-horizontal" style="display:flex; flex-direction: column;" > 
+                <div class="one">
+                <input type="text" name="" id="" placeholder="Username" style="margin-right:30px;">
+                <input type="text" name="" id="" placeholder="Email">
+                </div>
+                <div class="two">
+                <input type="text" name="" id="" placeholder="Phone Number">
+                <input type="text" name="" id="" placeholder="Address Line 1">
+                <input type="text" name="" id="" placeholder="Address Line 2">
+                <input type="text" name="" id="" placeholder="PIN" style="width: 30%;">
+                </div>
+                <div class="three">
+                <input type="radio" name="student" id="" value="student"> Student 
+                <input type="radio" name="student" id="" value="alumni"> Alumni 
+                </div>
+            </div>
+
+            <!-- <div class="form-horizontal" style="display:flex;"> 
+                <input type="text" name="" id="" placeholder="Workplace">
+                <input type="text" name="" id="" placeholder="Role">
+                <input type="text" name="" id="" placeholder="">
+                <input type="text" name="" id="" placeholder="PIN" style="width: 30%;">
+            </div>
+            <div class="form-horizontal" style="display:flex; flex-direction:row;"> 
+                <input type="text" name="" id="" placeholder="Skill 1">
+                <input type="text" name="" id="" placeholder="Skill 2">
+            </div> -->
+        </form>
+    </div>
+
+{% endblock %}

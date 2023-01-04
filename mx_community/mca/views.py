@@ -5,11 +5,12 @@ from django.contrib.auth import get_user_model
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from json import dumps
+from django.db.models import Q
+
 
 # Create your views here.
 def home(request):
     return render(request,'home.html')
-
 
 def register(request):
     if request.method == 'POST':
@@ -80,3 +81,25 @@ def profile(request):
     current_user = request.user
     u = NewUser.objects.filter(rollno=current_user)
     return render(request,'profile.html')
+
+@login_required
+def prosetup(request):
+    return render(request,'data.html')
+
+
+def search(request):
+    if request.method == 'GET':
+        a =  request.GET.get('q')
+        
+        if a is not None:
+            lookups = Q(title__icontains=a) | Q(content__icontains=a)
+            results = Post.objects.filter(lookups).distinct()
+            print(results)
+            context = {'results': results}
+            return render(request,'search.html',context)
+        return render(request,'search.html')
+
+    
+    return render(request,'search.html')
+
+    
