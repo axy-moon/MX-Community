@@ -28,9 +28,18 @@ class tokens(models.Model):
 
 class profile(models.Model):
     username = models.ForeignKey(NewUser,on_delete=CASCADE)
-    workplace = models.CharField(max_length=30,null=True)
+    workplace = models.CharField(max_length=30,null=True,blank=True)
     phone = models.CharField(max_length=13,null=True)
+    gender = models.CharField(max_length=10,null=False,default='Male')
+    dob = models.DateField(blank=True,default='2001-08-08')
     address_line_1 = models.CharField(max_length=50,null=True)
     address_line_2 = models.CharField(max_length=50,null=True)
     pin = models.IntegerField()
+    skill1 = models.CharField(max_length=50,blank=True)
+    skill2 = models.CharField(max_length=50,blank=True)
+    is_student = models.BooleanField(default=True)
+
+    
+    def __str__(self):
+        return self.username.rollno
 

@@ -16,14 +16,26 @@
         </div>
 
         <div>
+                <div class="result-box">
+
+                        <h4>User</h4>
+                        <p>Title</p>
+                        <p>Post Time</p>
+                        <p></p>
+                </div>
+
                 {% for i in results %}
-                
+                                
                 <div class="result-box">
 
                         <h4>{{i.author}}</h4>
                         <p>{{i.title}}</p>
-                        <p>{{i.post_time | todate }}</p>
+                        <p>{{i.post_time}}</p>
+                        <button type="button">View Post</button>
                 </div>
+                {% empty %}
+                <p style="text-align: center;">No Results for the keyword: {{a}}</p>
+
                 {% endfor %}
 
         </div>

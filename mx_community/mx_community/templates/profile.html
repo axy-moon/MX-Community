@@ -5,60 +5,95 @@
 {% block page %}
 <div class="profile-page">
     <div class="profile-container">
+      {% for i in profile %}
+
         <div class="profile-left">
             <div class="profile-info">
                 <img src="{% static '/img/user.png'%}" alt="">
-                <div class="work-info">
+                {% if i.is_student %}
+                <p class="name" style="color: #1876f2;">Student</p>
+                {% else %}
+                <p class="name" style="color: #1876f2;">Alumni</p>
                 <h3>Work</h3>
                 <hr>
                 <h4>Workplace 1</h4>
                 <p>Role 1</p>
                 <h4>Workplace 2</h4>
                 <p>Role 2</p>
+                {% endif %}
+                <div class="work-info">
+
+                
                 
             </div>
                 <div class="skills-info">
                     <h3>Skills</h3>
                     <hr>
-                    <p>Skill 1</p>
-                    <p>Skill 2</p>
-                    <p>Skill 3</p>
-                    <p>Skill 4</p>
+                    <p>{{i.skill1}}</p>
+                    <p>{{i.skill2}}</p>
                     </div>
             </div>
         </div>
         <div class="profile-right">
             <div class="personal-info">
-                <h1>Augxy Moon</h1>
-                <p class="name">22MX108</p>
+                <h1>{{user.get_full_name}}</h1>
+                <p class="name">{{request.user.rollno}}</p>
                 <div class="pro-btn">
                 <div class="profile-btns">
                     <button type="button"><i class="fa-solid fa-message"></i>Send Message</button>
                 </div>
 
                 <div class="profile-btns">
-                  <button type="button" style="background-color: grey;"><i class="fa-solid fa-pen"></i>View Posts</button>
+                  <button type="button" onclick="showPosts()" style="background-color: grey;"><i class="fa-solid fa-pen"></i>View Posts</button>
               </div>
             </div>
+            {% for i in ps%}
+            <div class="post-container" style="display: none; border: 1px solid rgb(14, 9, 105);">
+
+              <div class="post-row">
+                  <div class="user-profile">
+                      <img src="{% static '/img/user.png' %}" alt="">
+                      <div>
+                          <p>{{i.author.first_name}}<span>  {{i.author.rollno}}</span></p>
+                          <span>{{i.post_time}}</span>
+                                                  
+  
+                      </div>
+                  </div>
+                  <a href="#">  <i class="fas fa-ellipsis-v"></i></a>
+              </div>
+              <p class="post-title">{{i.title}}</p>
+              <p class="post-text">{{i.content}}</p>
+              
+                  <img src="/images/feed-image-1.png" alt="" class="post-img">
+  
+  
+                  <div class="post-row">
+                        <div class="post-profile-icon">
+                          <img src="/images/profile-pic.png" alt="">
+                          <i class="fa-sharp fa-solid fa-caret-down"></i>
+                      </div>
+                  </div>
+          </div>
+            {% endfor %}
             <div class="about">
                 <h2>About</h2>
                 <hr>
-              
                 <table>
                     <tr>
                       <th align="left">CONTACT INFORMATION</th>
                     </tr>
                     <tr>
                       <td valign="top">Phone: </td>
-                      <td  class="blue">+91 9489443153</td>
+                      <td  class="blue">+91 {{i.phone}}</td>
                     </tr>
                     <tr>
                       <td valign="top">Address: </td>
-                      <td>Christ Nager Poothurai <br>Kanyakumari Dt <br>PIN: 629176</td>
+                      <td>{{i.address_line_1}}<br>{{i.address_line_2}}<br>{{i.pin}}</td>
                     </tr>
                     <tr>
                       <td valign="top">Email: </td>
-                      <td  class="blue">augxy666@gmail.com</td>
+                      <td  class="blue">{{user.email}}</td>
                     </tr>
                 </table>
                 <table>
@@ -67,16 +102,26 @@
                     </tr>
                     <tr>
                       <td valign="top">Birthday: </td>
-                      <td>Aug 08 2001</td>
+                      <td>{{i.dob}}</td>
                     </tr>
                     <tr>
-                      <td valign="top">Gender: </td>
+                      <td valign="top">{{i.gender}}</td>
                       <td>Male</td>
                     </tr>
                 </table>
+                {% endfor %}
+
             </div>
         </div>
         </div>
     </div>
 </div>
+
+<script>
+  function showPosts() {
+
+      var temp = document.getElementsByClassName('post-container');
+      temp.style.display = 'block';
+}
+</script>
 {% endblock %}

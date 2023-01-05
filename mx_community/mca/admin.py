@@ -7,6 +7,7 @@ from chat.models import *
 admin.site.register(NewUser)
 admin.site.register(Post)
 admin.site.register(tokens)
+admin.site.register(profile)
 
 admin.site.register(ChatMessage)
 

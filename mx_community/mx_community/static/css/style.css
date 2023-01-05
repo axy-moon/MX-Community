@@ -116,13 +116,14 @@ i {
     margin-top: 60px;
 }
 .search-submit input[type=submit] {
-    background-color: var(--thColor);
+    background-color: rgb(1, 155, 70);
     width: 100px;
     margin: auto;
     height: 40px;
     color: #fff;
     border-radius: 5px;
     margin-bottom: 40px;
+    border: none;
 }
 
 .online{
@@ -506,6 +507,10 @@ i {
 .profile-info {
     padding: 48px;
 }
+
+.profile-info img {
+    border-radius: 8px;
+}
 .profile-info  p {
     padding: 3px;
     color: #6B728E;
@@ -573,7 +578,6 @@ i {
 }
 
 #profile-form {
-    border: 1px solid red;
     width: 70%;
     margin: auto;
     background-color: var(--boxColor);
@@ -584,7 +588,6 @@ i {
 .form-horizontal input[type=radio] {
     width: auto;
     margin-right: 10px;
-    margin-left: 10px;
 
 }
 .form-horizontal .one {
@@ -623,5 +626,25 @@ i {
     width: 50%;
     margin: auto;
     margin-bottom: 10px;
+
+}
+
+.result-box button {
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #1876f2;
+}
+
+#profile-sub {
+    border: none;
+    background-color: #40800f;
+    width: 20%;
+    margin: auto;
+    height: 40px;
+    border-radius: 8px;
+    color: #fff;
+    margin-top: 40px;
 
 }

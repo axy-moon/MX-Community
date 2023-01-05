@@ -4,25 +4,41 @@
 
 {% block page %}
 
-
+    <h1 style="text-align: center; margin-top: 20px;">Setup your Profile</h1>
     <div class="post-input-container">
         <form action="" method="POST" id="profile-form">
             <div class="form-horizontal" style="display:flex; flex-direction: column;" > 
+                {% csrf_token %}
                 <div class="one">
-                <input type="text" name="" id="" placeholder="Username" style="margin-right:30px;">
-                <input type="text" name="" id="" placeholder="Email">
+                <input type="text" name="" id="" placeholder="Username" style="margin-right:30px;" value="{{user.username}}">
+                <input type="text" name="" id="" placeholder="Email" value="{{user.email}}">
                 </div>
                 <div class="two">
-                <input type="text" name="" id="" placeholder="Phone Number">
-                <input type="text" name="" id="" placeholder="Address Line 1">
-                <input type="text" name="" id="" placeholder="Address Line 2">
-                <input type="text" name="" id="" placeholder="PIN" style="width: 30%;">
+                <input type="text" name="phone" id="" placeholder="Phone Number">
+                <input type="date" name="dob">
+                <input type="text" name="Add1" id="" placeholder="Address Line 1">
+                <select style="width: 20%;" name="gender">
+                    <option value="">Gender</option>
+                    <option value="Male" >Male</option>
+                    <option value="Female">Female</option>
+                </select>
+                <input type="text" name="Add2" id="" placeholder="Address Line 2">
+                <input type="text" name="pin" id="" placeholder="PIN" style="width: 30%;">
                 </div>
                 <div class="three">
                 <input type="radio" name="student" id="" value="student"> Student 
-                <input type="radio" name="student" id="" value="alumni"> Alumni 
+                <input type="radio" name="student" id="" onclick="alumni()" value="alumni" style="margin-left:20px;"> Alumni 
+                </div>
+                <div class="four">
+                    <div class="wrk" id="wrk">
+                    <input type="text" name="work" id="" placeholder="Workplace" style="width: 40%;"> 
+                    <input type="text" name="role" id="" placeholder="Role" style="width: 30%; margin-left:100px;">
+                    </div>
+                    <input type="text" name="skill1" id="" placeholder="Skill 1" style="width: 28%;">
+                    <input type="text" name="skill2" id="" placeholder="Skill 2" style="width: 28%; margin-left:40px;">
                 </div>
             </div>
+            <input type="submit" name="" id="profile-sub">
 
             <!-- <div class="form-horizontal" style="display:flex;"> 
                 <input type="text" name="" id="" placeholder="Workplace">

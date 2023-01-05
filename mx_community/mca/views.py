@@ -23,7 +23,7 @@ def register(request):
 
         user = NewUser.objects.create_user(rollno=rollno,username=username,email=email,password=password,first_name=firstname,last_name=lastname)
         user.save()
-        return redirect('login')
+        return redirect('profile_setup')
 
     return render(request,'register.html')
 
@@ -34,8 +34,12 @@ def login(request):
 
         user = auth.authenticate(request,password=password,rollno=rollno)
         if user is not None:
-            auth.login(request,user)
-            return redirect('feed')
+            if user.last_login:
+                auth.login(request,user)
+                return redirect('feed')
+            else:
+                auth.login(request,user)
+                return redirect('profile_setup')
         else:
             return HttpResponse('Invalid User')
     return render(request,'login.html')
@@ -76,14 +80,41 @@ def messages(request):
     return render(request,'messages.html')
 
 @login_required
-def profile(request):
+def profiles(request):
      
     current_user = request.user
     u = NewUser.objects.filter(rollno=current_user)
-    return render(request,'profile.html')
+    ps = Post.objects.filter(author=current_user).order_by('-post_time')
+    d = profile.objects.filter(username=current_user.id)
+    print(d)
+    cont = {'profile':d,'ps':ps}
+    return render(request,'profile.html',cont)
 
 @login_required
 def prosetup(request):
+    if request.method == 'POST':
+        phone = request.POST['phone']
+        add1 = request.POST['Add1']
+        add2 = request.POST['Add2']
+        pin = request.POST['pin']
+        sA = request.POST['student']
+        work = request.POST['work']
+        role = request.POST['role']
+        s1 = request.POST['skill1']
+        s2 = request.POST['skill2']
+        dob = request.POST['dob']
+        gender = request.POST['gender']
+
+        current_user = request.user
+        username = NewUser.objects.get(username=current_user.username)
+        status = True
+        if sA == 'alumni':
+            status = False
+
+
+        profile.objects.create(username=username,workplace=work,phone=phone,address_line_1=add1,address_line_2=add2,pin=pin,gender=gender,dob=dob,skill1=s1,skill2=s2,is_student=status)
+        print("Stored")
+        return redirect('feed')
     return render(request,'data.html')
 
 
@@ -95,11 +126,10 @@ def search(request):
             lookups = Q(title__icontains=a) | Q(content__icontains=a)
             results = Post.objects.filter(lookups).distinct()
             print(results)
-            context = {'results': results}
+            context = {'results': results,'a':a}
             return render(request,'search.html',context)
         return render(request,'search.html')
-
-    
-    return render(request,'search.html')
+    else:
+        return render(request,'search.html')
 
     
