@@ -11,7 +11,7 @@ urlpatterns = [
     path('messages',views.messages,name='messages'),
     path('profile',views.profiles,name='profile'),
     path('profile_setup',views.prosetup,name='profile_setup'),
-    path('search',views.search,name='search')
-    
+    path('search',views.search,name='search'),
+    path('verify_account',views.verify,name='verify')
 ]
 

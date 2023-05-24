@@ -48,6 +48,9 @@ def logout(request):
     auth.logout(request)
     return redirect('home')
 
+def verify(request):
+    return render(request,"sendmail.html")
+
 
 @login_required
 def feed(request):

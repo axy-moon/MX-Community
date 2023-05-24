@@ -93,3 +93,68 @@ nav , .container {
 .right img {
   width: 80%;
 }
+
+
+.mgrid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-top: 20px;
+  width: 90%;
+  margin: auto;
+}
+
+.mleft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.reg-form form {
+  padding: 60px;
+  display: grid;
+  place-items: center;
+  margin-top: 56px;  
+}
+
+.submit-btn {
+  margin-right: 100px;
+
+}
+
+.submit-btn p {
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.reg-form input {
+  font-size: 18px;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: transparent;
+  border: 1px solid #000;
+
+}
+
+
+
+
+form input[type=submit] {
+  margin-top: 20px;
+  width: 80%;
+  padding: 5px;
+  cursor: pointer;
+}
+
+form input[type=submit]:hover {
+  background-color: #000;
+  color: #fff;
+}
+.fld {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+

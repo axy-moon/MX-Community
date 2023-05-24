@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/css/home.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&family=Open+Sans:wght@800&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <title>MX NETWORK | Verify </title>
+</head>
+<body>
+   
+      
+    <nav>
+        <h1>MX NETWORK</h1>
+        <div class="nav-links">
+            <p> <a href="{% url 'home' %}">HOME</a></p>
+            <p><a href="{% url 'register' %}">REGISTER</a></p>
+            <p>SIGN IN</p>
+            <p>ABOUT</p>
+            <p></p>
+        </div>
+    </nav>
+
+<div class="mgrid">
+
+    <div class="mleft">
+        <img src="{% static 'img/mail.svg' %}" alt="">
+    </div>
+    <div class="mright">
+        <div class="reg-form">
+        <div class="fheader">
+           
+        <form action="" method="POST">
+            {% csrf_token %}
+            <h1>Verify your Account</h1>
+            <p>An OTP was sent to your registered Mail ID</p>
+
+            <div class="submit-btn">
+                <p>Enter OTP: </p>
+                <div class="fld">
+                <input type="number" name="otp" id="" required>
+                <input type="submit" name="register-btn" id="register-btn" value="Confirm">
+                </div>
+            </div>
+        </form> 
+        </div>    
+    </div>
+</div>
+</body>
+</html>
