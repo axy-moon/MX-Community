@@ -5,8 +5,8 @@ from chat.models import *
 # Create your views here.
 
 def chat(request):
-    
-    threads = Thread.objects.order_by('timestamp').filter(user=request.user).prefetch_related('chatmessage_thread')
+    #.filter(user=request.user).prefetch_related('chatmessage_thread')
+    threads = Thread.objects.order_by('timestamp')
     context = {
         'Threads' : threads
     }
