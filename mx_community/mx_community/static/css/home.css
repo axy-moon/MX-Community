@@ -143,7 +143,7 @@ nav , .container {
 
 form input[type=submit] {
   margin-top: 20px;
-  width: 80%;
+  width: 40%;
   padding: 5px;
   cursor: pointer;
 }
@@ -156,5 +156,10 @@ form input[type=submit]:hover {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.reg-form span {
+  color: green;
+  margin-left: 20px;
 }
 

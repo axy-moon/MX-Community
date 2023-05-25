@@ -6,6 +6,7 @@ from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from json import dumps
 from django.db.models import Q
+import random
 
 
 # Create your views here.
@@ -49,6 +50,16 @@ def logout(request):
     return redirect('home')
 
 def verify(request):
+    global otp
+    if(request.method == 'POST'):
+        entered_otp = request.POST['otp']
+        print(otp)
+        if (int(entered_otp)==int(otp)):
+            return HttpResponse('Success')
+        else:
+            return HttpResponse("failed")
+    otp = random.randrange(1000,9999)
+    print(otp)
     return render(request,"sendmail.html")
 
 

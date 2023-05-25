@@ -52,8 +52,3 @@ function alumni() {
     var rad = document.getElementById('wrk');
     rad.style.display = "flex";
 }
-
-function showPosts() {
-
-    var temp = document.getElementById('pp').style.display = 'block'
-}
