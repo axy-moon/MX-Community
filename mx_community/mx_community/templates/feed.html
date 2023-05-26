@@ -107,29 +107,19 @@
             <h4>Events</h4>
             <a href="#">See All</a>
         </div>
-
+        {% for i in events %}
         <div class="event">
             <div class="left-event">
-                <h3>9</h3>
-                <span>January</span>
+                <h3>{{i.event_date|date:'d'}}</h3>
+                <span>{{i.event_date|date:'F'}}</span>
             </div>
             <div class="right-event">
-                <h4>CA Test</h4>
-                <p><i class="fa-solid fa-location-dot"></i></i>PSG CT</p>
+                <h4>{{i.event_name}}</h4>
+                <p><i class="fa-solid fa-location-dot"></i></i>{{i.event_location}}</p>
                 <a href="#">More Info</a>
             </div>
         </div>
-            <div class="event">
-                <div class="left-event">
-                    <h3>19</h3>
-                    <span>January</span>
-                </div>
-                <div class="right-event">
-                    <h4>Semester Exam</h4>
-                    <p><i class="fa-solid fa-location-dot"></i>PSG CT</p>
-                    <a href="#">More Info</a>
-                </div>
-        </div>
+        {% endfor %}
         <div class="sidebar-title">
             <h4>COLLEGE</h4>
             <a href="#">Close</a>

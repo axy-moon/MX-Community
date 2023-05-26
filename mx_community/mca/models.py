@@ -43,3 +43,8 @@ class profile(models.Model):
     def __str__(self):
         return self.username.rollno
 
+
+class Event(models.Model):
+    event_name = models.CharField(max_length=100,verbose_name="Event name")
+    event_date = models.DateField(verbose_name='Date')
+    event_location = models.CharField(max_length=100,verbose_name='Location')

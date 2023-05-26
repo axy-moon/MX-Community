@@ -75,8 +75,9 @@ def feed(request):
         Post.objects.create(author=author,content=content,title=title)
         return redirect('feed')
     users = User.objects.all()
+    event = Event.objects.all()[:2]
     print(users)  
-    feed_dict = {'feed':Post.objects.order_by('-post_time'),'users':users}
+    feed_dict = {'feed':Post.objects.order_by('-post_time'),'users':users,'events':event}
     return render(request,'feed.html',feed_dict)
 
 @login_required

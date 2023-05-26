@@ -8,7 +8,7 @@ admin.site.register(NewUser)
 admin.site.register(Post)
 admin.site.register(tokens)
 admin.site.register(profile)
-
+admin.site.register(Event)
 admin.site.register(ChatMessage)
 
 class ChatMessage(admin.TabularInline):
