@@ -105,6 +105,9 @@ def profiles(request):
     cont = {'profile':d,'ps':ps}
     return render(request,'profile.html',cont)
 
+def placement(request):
+    return render(request,"placements.html")
+
 @login_required
 def prosetup(request):
     if request.method == 'POST':

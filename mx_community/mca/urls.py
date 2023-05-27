@@ -12,6 +12,8 @@ urlpatterns = [
     path('profile',views.profiles,name='profile'),
     path('profile_setup',views.prosetup,name='profile_setup'),
     path('search',views.search,name='search'),
-    path('verify_account',views.verify,name='verify')
+    path('verify_account',views.verify,name='verify'),
+    path('feed/placements',views.placement,name='placemeent')
+
 ]
 
