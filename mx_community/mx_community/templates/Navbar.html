@@ -1,0 +1,44 @@
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<nav>
+        <div class="nav-right">
+            <img src="{% static '/img/logo.png' %}" class="logo">
+            
+              
+        </div>
+        <div class="nav-left">
+            <ul>
+              <div class="nav-icons">
+                <div class="nico">
+                <li><a href="{% url 'feed' %}"><span class="material-symbols-outlined">newspaper</span></a></li>
+  
+                </div>
+                <div class="nico">
+                 <li><a href="{% url 'search' %}"><span class="material-symbols-outlined">search</span></a></li>
+                </div>
+                <div class="nico">
+                <li><a href="{% url 'chat' %}"><span class="material-symbols-outlined">forum</span></a></li>
+          
+                </div>
+                <div class="nico">
+                <li><a href="{% url 'tokens' %}"><span class="material-symbols-outlined">diversity_3</span></a></li>
+                </div>
+                
+                <div class="nav-user-icon  nico">
+                  <li><a href="{% url 'profile' %}"><img src="{% static '/img/user.png' %}"></a></li>
+                </div>
+                <div class="nico">
+                <li><a href="{% url 'logout' %}"><span class="material-symbols-outlined">logout</span></a></li>
+                </div>
+              </div>
+
+
+              </ul>
+          </div>  
+
+
+          
+         
+</nav>
