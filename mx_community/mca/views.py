@@ -6,6 +6,8 @@ from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from json import dumps
 from django.db.models import Q
+from django.conf import settings
+from django.core.mail import send_mail
 import random
 
 
@@ -14,6 +16,7 @@ def home(request):
     return render(request,'home.html')
 
 def register(request):
+    global username,email;
     if request.method == 'POST':
         rollno = request.POST['rollno']
         username = request.POST['username']
@@ -24,7 +27,7 @@ def register(request):
 
         user = NewUser.objects.create_user(rollno=rollno,username=username,email=email,password=password,first_name=firstname,last_name=lastname)
         user.save()
-        return redirect('profile_setup')
+        return redirect('verify')
 
     return render(request,'register.html')
 
@@ -55,10 +58,11 @@ def verify(request):
         entered_otp = request.POST['otp']
         print(otp)
         if (int(entered_otp)==int(otp)):
-            return HttpResponse('Success')
+            return redirect('profile_setup')
         else:
             return HttpResponse("failed")
     otp = random.randrange(1000,9999)
+    mail_verify(username,email,otp)
     print(otp)
     return render(request,"sendmail.html")
 
@@ -150,4 +154,11 @@ def search(request):
     else:
         return render(request,'search.html')
 
-    
+
+def mail_verify(username,email,otp):
+    subject = '' + str(otp)
+    message = f'Hi {username}, Welcome to MX Community. Your OTP for verifying your account is {otp}'
+    email_from = settings.EMAIL_HOST_USER
+    recipient_list = [email, ]
+    send_mail( subject, message, email_from, recipient_list )
+    return True

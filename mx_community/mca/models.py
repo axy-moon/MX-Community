@@ -13,7 +13,7 @@ class Post(models.Model):
     title = models.CharField(max_length=30,default='Question')
     post_time = models.DateTimeField(default=timezone.now)
     content = models.TextField(null=False)
-    comment = models.TextField(blank=True)
+    comment = models.TextField(blank=True,)
 
     def __str__(self):
         return self.title
