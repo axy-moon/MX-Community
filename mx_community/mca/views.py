@@ -73,10 +73,11 @@ def feed(request):
     if request.method == 'POST':
         content = request.POST['postcontent']
         title = request.POST['postTitle']
+        pimage = request.FILES['postimage']
         current_user = request.user
         author = NewUser.objects.get(rollno=current_user.rollno)
 
-        Post.objects.create(author=author,content=content,title=title)
+        Post.objects.create(author=author,content=content,title=title,post_image=pimage)
         return redirect('feed')
     users = User.objects.all()
     event = Event.objects.all()[:2]

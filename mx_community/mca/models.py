@@ -12,6 +12,7 @@ class Post(models.Model):
     author = models.ForeignKey(NewUser,on_delete=CASCADE)
     title = models.CharField(max_length=30,default='Question')
     post_time = models.DateTimeField(default=timezone.now)
+    post_image = models.ImageField(upload_to='posts')
     content = models.TextField(null=False)
     comment = models.TextField(blank=True,)
 

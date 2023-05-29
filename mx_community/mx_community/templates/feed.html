@@ -39,7 +39,7 @@
                 </div>
             </div>
             <div class="post-input-container">
-                <form action="" method="POST" onfocus="" id="post-form">
+                <form action="" method="POST" onfocus="" id="post-form"  enctype="multipart/form-data" >
                     {% csrf_token %}
                     <textarea rows="4" required placeholder="What's your Question?" name="postcontent" oninput="inputTitle()"></textarea>
                     <div class="post-title" id="post-title" style="display:none;">
@@ -52,12 +52,19 @@
                             <option value="Resources">Resources</option>
                             <option value="Academics">Academics</option>
                         </select>
+                       
+                    </div>
+                    <div class="imgupload" id="img-up" style="display: none;">
+                        <label class="custom-file-upload">
+                            <input type="file" name="postimage" />
+                            Upload Image
+                        </label>
                     </div>
                 </form>
                 
                 <div class="add-post-links">
                     <a href="#" onclick="createPost()">Post<i class="fa-solid fa-paper-plane"></i></a>
-                    <a href="#">Add Photo  <i class="fa-solid fa-image"></i></a>
+                    <a href="#" onclick="imageupload()">Add Photo  <i class="fa-solid fa-image"></i></a>
                     <a href="#"> <img src="/images/feeling.png" alt=""></a>
                 </div>
                 
@@ -73,8 +80,7 @@
                     <div>
                         <p>{{post.author.first_name}}<span>  {{post.author.rollno}}</span></p>
                         <span>{{post.post_time}}</span>
-                                                
-
+                        
                     </div>
                 </div>
                 <a href="#">  <i class="fas fa-ellipsis-v"></i></a>
@@ -82,7 +88,8 @@
             <p class="post-title">{{post.title}}</p>
             <p class="post-text">{{post.content}}</p>
             
-                <img src="/images/feed-image-1.png" alt="" class="post-img">
+                <img src="{{ post.post_image.url }}" alt="" class="post-img">                   
+
 
 
                 <div class="post-row">

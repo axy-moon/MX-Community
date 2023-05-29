@@ -7,6 +7,11 @@ function createPost() {
         form.submit();
 }
 
+const imageupload = () => {
+    var im = document.getElementById('img-up');
+    im.style.display = 'flex';  
+}
+
 function inputTitle() {
     var title = document.getElementById('post-title');
     title.style.display = 'flex';
