@@ -11,7 +11,7 @@
     <!------------------left-sidebar------------->
     <div class="left-sidebar">
         <div class="imp-links">
-            <a href="#"> <i class="fa-solid fa-briefcase"></i>Placements</a>
+            <a href="{% url 'placement' %}"> <i class="fa-solid fa-briefcase"></i>Placements</a>
             <a href="#"> <i class="fa-solid fa-photo-film"></i>Gallery</a>
             <a href="#"><i class="fa-solid fa-user-graduate"></i> Internships</a>
             <a href="#"> <i class="fa-solid fa-book-open"></i>Resources</a>
@@ -44,13 +44,15 @@
                     <textarea rows="4" required placeholder="What's your Question?" name="postcontent" oninput="inputTitle()"></textarea>
                     <div class="post-title" id="post-title" style="display:none;">
                         <input type="text" name="postTitle"  placeholder="Title" style="margin-right: 10px;">
-                        <select name="" id="" placeholder="Post type">
+                        <select name="category" id="" placeholder="Post type">
                             <option value="">Category</option>
                             <option value="Question">Question</option>
                             <option value="Internship">Internship</option>
                             <option value="Placements">Placements</option>
                             <option value="Resources">Resources</option>
                             <option value="Academics">Academics</option>
+                            <option value="Academics">Others</option>
+
                         </select>
                        
                     </div>

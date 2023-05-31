@@ -348,6 +348,8 @@ nav{
     margin-bottom: 10px;
 }
 
+
+
 .post-input-container input {
     width: 60%;
     border: 0;
@@ -673,3 +675,6 @@ nav{
 
 }
 
+#selected , #selected > *{
+    color: blue;
+}

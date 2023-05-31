@@ -37,7 +37,9 @@
                 </div> --> 
             <form action="" method="POST">
                 {% csrf_token %}
-
+                {% if is_auth %}
+                <p class="alert">Invalid Login Credentials</p>
+                {% endif %}
                 <div class="form-left">
                     <p>Roll Number</p>
                     <input type="text" name="rollno" id="" required>

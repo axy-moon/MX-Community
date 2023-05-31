@@ -2,7 +2,52 @@
 {% load static %}
 
 {% block page%}
-    <div>
-        <h1>Placements</h1>
+<div class="container" style="margin-top:4px ;">
+
+    <div class="left-sidebar">
+        <div class="imp-links">
+            <a href="{% url 'placement' %}" id="selected"> <i class="fa-solid fa-briefcase"></i>Placements</a>
+            <a href="#"> <i class="fa-solid fa-photo-film"></i>Gallery</a>
+            <a href="#"><i class="fa-solid fa-user-graduate"></i> Internships</a>
+            <a href="#"> <i class="fa-solid fa-book-open"></i>Resources</a>
+            <a href="#"> <i class="fa-solid fa-school-circle-check"></i>Workshops</a>
+            <a href="#">See More</a>
+        </div>
     </div>
-{% endblock %}
+
+    {% for post in place %}
+    <div class="post-container" id="pp">
+
+        <div class="post-row">
+            <div class="user-profile">
+                <img src="{% static '/img/user.png' %}" alt="">
+                <div>
+                    <p>{{post.author.first_name}}<span>  {{post.author.rollno}}</span></p>
+                    <span>{{post.post_time}}</span>
+                    
+                </div>
+            </div>
+            <a href="#">  <i class="fas fa-ellipsis-v"></i></a>
+        </div>
+        <p class="post-title">{{post.title}}</p>
+        <p class="post-text">{{post.content}}</p>
+        
+            <img src="{{ post.post_image.url }}" alt="" class="post-img">                   
+
+
+
+            <div class="post-row">
+        
+                <div class="activity-icons">
+                    <div><img src="/images/like-blue.png" alt=""><i class="fa-solid fa-comments"></i>0</div>
+                </div>
+                  <div class="post-profile-icon">
+                    <img src="/images/profile-pic.png" alt="">
+                    <i class="fa-sharp fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+    </div>
+    {% endfor %}
+</div>
+
+    {% endblock %}

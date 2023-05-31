@@ -32,6 +32,7 @@ def register(request):
     return render(request,'register.html')
 
 def login(request):
+    is_auth = False
     if request.method == 'POST':
         password = request.POST['password']
         rollno = request.POST['rollno']
@@ -45,7 +46,8 @@ def login(request):
                 auth.login(request,user)
                 return redirect('profile_setup')
         else:
-            return HttpResponse('Invalid User')
+            is_auth = True
+            return render(request,'login.html',locals())
     return render(request,'login.html')
 
 def logout(request):
@@ -73,11 +75,15 @@ def feed(request):
     if request.method == 'POST':
         content = request.POST['postcontent']
         title = request.POST['postTitle']
-        pimage = request.FILES['postimage']
+        cat = request.POST['category']
         current_user = request.user
         author = NewUser.objects.get(rollno=current_user.rollno)
+        if(request.FILES['postimage'] != ""):
+            pimage = request.FILES['postimage']
+        else:
+            pimage = None
 
-        Post.objects.create(author=author,content=content,title=title,post_image=pimage)
+        Post.objects.create(author=author,content=content,title=title,post_image=pimage,category=cat)
         return redirect('feed')
     users = User.objects.all()
     event = Event.objects.all()[:2]
@@ -111,6 +117,8 @@ def profiles(request):
     return render(request,'profile.html',cont)
 
 def placement(request):
+    place = Post.objects.filter(category="placement")
+
     return render(request,"placements.html")
 
 @login_required

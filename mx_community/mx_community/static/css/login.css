@@ -112,3 +112,9 @@ form input[type=submit]:hover {
 #register-btn {
     margin-top: 40px;
 }
+
+.alert {
+    color: red;
+    font-weight: 500;
+    font-size: 19px;
+}

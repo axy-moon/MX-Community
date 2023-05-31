@@ -3,9 +3,10 @@ function createPost() {
     var postContent = document.getElementsByName('postcontent');
     if(postContent == '')
         alert("Content cannot be empty");
-    else
+    else {
         form.submit();
-}
+    }
+    }
 
 const imageupload = () => {
     var im = document.getElementById('img-up');
@@ -29,13 +30,14 @@ function rollVal()
 {
     var regroll = document.getElementById("regroll").value;
     var regex=/[1-9]{2}MX[0-9]{3}/;
+    var al = document.getElementById('invalRoll')
     if(regex.test(regroll)==true)
     {
-        
+        al.style.display = 'none';
     }
     else
     {
-        alert("Enter a valid Roll Number");
+        al.style.display = 'flex';
     }
 }
 
