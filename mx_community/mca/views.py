@@ -117,9 +117,12 @@ def profiles(request):
     return render(request,'profile.html',cont)
 
 def placement(request):
-    place = Post.objects.filter(category="placement")
-
-    return render(request,"placements.html")
+    place = Post.objects.filter(category="Placements")
+    users = NewUser.objects.all()
+    event = Event.objects.all()[:2]
+    print(place)
+    d = {'place': place,'users':users,'events':event}
+    return render(request,"placements.html",d)
 
 @login_required
 def prosetup(request):
