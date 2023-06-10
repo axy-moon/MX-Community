@@ -78,10 +78,7 @@ def feed(request):
         cat = request.POST['category']
         current_user = request.user
         author = NewUser.objects.get(rollno=current_user.rollno)
-        if(request.FILES['postimage'] != ""):
-            pimage = request.FILES['postimage']
-        else:
-            pimage = None
+        pimage = request.FILES['postimage']
 
         Post.objects.create(author=author,content=content,title=title,post_image=pimage,category=cat)
         return redirect('feed')

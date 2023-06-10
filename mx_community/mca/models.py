@@ -13,7 +13,7 @@ class Post(models.Model):
     title = models.CharField(max_length=30,default='Question')
     category = models.CharField(max_length=40,default='Others')
     post_time = models.DateTimeField(default=timezone.now)
-    post_image = models.ImageField(upload_to='posts',blank=True,null=True)
+    post_image = models.ImageField(upload_to='posts',blank=True)
     content = models.TextField(null=False)
     comment = models.TextField(blank=True,)
 
