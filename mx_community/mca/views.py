@@ -171,3 +171,8 @@ def mail_verify(username,email,otp):
     recipient_list = [email, ]
     send_mail( subject, message, email_from, recipient_list )
     return True
+
+def events(request):
+    e = Event.objects.all()
+    dy = {"events":e}
+    return render(request,"Events.html",dy)

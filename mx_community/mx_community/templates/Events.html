@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} MX NETWORK | Feeds {% endblock %}
+
+{% block page%}
+
+    <div class="event-container">
+        <h1>Events</h1>
+        <div>
+            {% for i in events %}
+            <div class="event-box">
+                <div class="event">
+                    <div class="left-event">
+                        <h3>{{i.event_date|date:'d'}}</h3>
+                        <span>{{i.event_date|date:'F'}}</span>
+                    </div>
+                    <div class="right-event">
+                        <h2>{{i.event_name}}</h2>
+                        <p><span>Location: </span>{{i.event_location}}</p>
+                        <a href="#">More Info</a>
+                    </div>
+                </div>
+            </div>
+                {% endfor %}
+        </div>
+    </div>
+
+
+{% endblock  %}

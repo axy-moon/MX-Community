@@ -15,7 +15,9 @@ urlpatterns = [
     path('profile_setup',views.prosetup,name='profile_setup'),
     path('search',views.search,name='search'),
     path('verify_account',views.verify,name='verify'),
-    path('feed/placements',views.placement,name='placement')
+    path('feed/placements',views.placement,name='placement'),
+    path('feed/events',views.events,name='events')
+
 ]
 
 if settings.DEBUG:
