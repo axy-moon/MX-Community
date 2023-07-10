@@ -1,9 +1,14 @@
 # Social-Network
 Web Application Development Project
 
+A Social Network application exclusively for the MCA department students of PSG College of Technology. The application serves as a platform similar to Facebook, facilitating seamless connectivity between current students, friends, and alumni of the department.
+
+# Technology
+Django Framework
+HTML CSS & JavasSript
 
 
-
+# Screens
 
 Login Page
 ![image](https://github.com/axy-moon/Social-Network/assets/90022361/b7b998e2-1c1c-4411-a1c1-40d3e3893be8)
