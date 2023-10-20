@@ -2,3 +2,4 @@
 db.sqlite3
 /media/
 mx_community/mx_community/media/posts/
+config.py
